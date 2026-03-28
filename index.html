@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- ============================================================
+         VendeMas App — Página web principal
+         Autor: Josias Rojas Alca
+         Descripción: Landing page de VendeMas App para presentar
+                      CajaFacil, sus características y planes.
+         Última actualización: 2026
+    ============================================================ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO básico -->
+    <title>VendeMas App — Soluciones digitales para negocios</title>
+    <meta name="description" content="CajaFacil: sistema POS para boticas y farmacias en Perú. Control de ventas, inventario, caja y reportes por WhatsApp. Desde S/350 pago único.">
+    <meta name="keywords" content="sistema POS botica, farmacia, software caja, Huanuco, Peru, CajaFacil, VendeMas">
+    <meta name="author" content="VendeMas App — Josias Rojas Alca">
+
+    <!-- Open Graph (para compartir en redes sociales) -->
+    <meta property="og:title" content="VendeMas App — CajaFacil para Boticas">
+    <meta property="og:description" content="Sistema POS para boticas y farmacias. Control total de tu negocio desde S/350.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_PE">
+
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- Hoja de estilos principal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ============================================================
+         NAVBAR — Barra de navegación fija
+         Contiene: logo, links de navegación y botón de contacto
+    ============================================================ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-contenedor">
+
+            <!-- Logo de VendeMas -->
+            <a href="#inicio" class="nav-logo">
+                <img src="logo.png" alt="VendeMas App" class="nav-logo-img" onerror="this.style.display='none'">
+                <span class="nav-logo-texto">VendeMas<span class="nav-logo-app">App</span></span>
+            </a>
+
+            <!-- Links de navegación (ocultos en móvil) -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#producto" class="nav-link">Producto</a></li>
+                <li><a href="#caracteristicas" class="nav-link">Características</a></li>
+                <li><a href="#precios" class="nav-link">Precios</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+
+            <!-- Botón CTA de la navbar -->
+            <a href="https://wa.me/51929201444?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20CajaFacil"
+               target="_blank"
+               class="nav-cta">
+                Solicitar demo
+            </a>
+
+            <!-- Botón hamburguesa para móvil -->
+            <button class="nav-hamburguesa" id="nav-hamburguesa" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </nav>
+
+
+    <!-- ============================================================
+         HERO — Sección principal de bienvenida
+         Objetivo: captar atención y comunicar propuesta de valor
+    ============================================================ -->
+    <section class="hero" id="inicio">
+        <div class="hero-contenedor">
+
+            <!-- Texto principal -->
+            <div class="hero-texto">
+                <span class="hero-badge">🇵🇪 Hecho en Perú para Perú</span>
+                <h1 class="hero-titulo">
+                    Tu botica,
+                    <span class="hero-titulo-acento">organizada</span>
+                    y bajo control
+                </h1>
+                <p class="hero-descripcion">
+                    CajaFacil es el sistema POS diseñado especialmente para boticas
+                    y farmacias pequeñas. Controla tus ventas, inventario y caja
+                    desde una sola pantalla, sin complicaciones.
+                </p>
+
+                <!-- Botones de acción -->
+                <div class="hero-botones">
+                    <a href="https://wa.me/51929201444?text=Hola%2C%20quiero%20una%20demo%20de%20CajaFacil"
+                       target="_blank"
+                       class="btn-primario">
+                        💬 Quiero una demo gratis
+                    </a>
+                    <a href="#precios" class="btn-secundario">
+                        Ver precios →
+                    </a>
+                </div>
+
+                <!-- Estadísticas rápidas -->
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <strong>S/350</strong>
+                        <span>Pago único</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <strong>S/79</strong>
+                        <span>Por mes (web)</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <strong>24/7</strong>
+                        <span>Soporte WhatsApp</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Imagen / mockup del sistema -->
+            <div class="hero-imagen">
+                <div class="hero-mockup">
+                    <!-- Barra superior del mockup -->
+                    <div class="mockup-topbar">
+                        <div class="mockup-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <span class="mockup-url">localhost:5000</span>
+                    </div>
+                    <!-- Contenido del mockup -->
+                    <div class="mockup-contenido">
+                        <div class="mockup-sidebar">
+                            <div class="mockup-logo-sm">CF</div>
+                            <div class="mockup-nav-item activo">Inicio</div>
+                            <div class="mockup-nav-item">Ventas</div>
+                            <div class="mockup-nav-item">Caja</div>
+                            <div class="mockup-nav-item">Inventario</div>
+                            <div class="mockup-nav-item">Historial</div>
+                        </div>
+                        <div class="mockup-main">
+                            <div class="mockup-header">Buenos días 👋</div>
+                            <div class="mockup-cards">
+                                <div class="mockup-card verde">
+                                    <div class="mockup-card-label">Ventas hoy</div>
+                                    <div class="mockup-card-val">S/248.00</div>
+                                </div>
+                                <div class="mockup-card azul">
+                                    <div class="mockup-card-label">Transacciones</div>
+                                    <div class="mockup-card-val">12</div>
+                                </div>
+                                <div class="mockup-card naranja">
+                                    <div class="mockup-card-label">Stock bajo</div>
+                                    <div class="mockup-card-val">3</div>
+                                </div>
+                                <div class="mockup-card rojo">
+                                    <div class="mockup-card-label">Por vencer</div>
+                                    <div class="mockup-card-val">1</div>
+                                </div>
+                            </div>
+                            <div class="mockup-lista-titulo">Últimas ventas</div>
+                            <div class="mockup-venta">
+                                <span>Paracetamol 500mg x3</span>
+                                <span class="mockup-badge yape">Yape</span>
+                                <span class="mockup-monto">S/4.50</span>
+                            </div>
+                            <div class="mockup-venta">
+                                <span>Amoxicilina 500mg x1</span>
+                                <span class="mockup-badge ef">Efectivo</span>
+                                <span class="mockup-monto">S/8.00</span>
+                            </div>
+                            <div class="mockup-venta">
+                                <span>Ibuprofeno 400mg x2</span>
+                                <span class="mockup-badge plin">Plin</span>
+                                <span class="mockup-monto">S/6.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Efecto de brillo detrás del mockup -->
+                <div class="hero-glow"></div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         PRODUCTO — Qué es CajaFacil y para quién es
+    ============================================================ -->
+    <section class="producto" id="producto">
+        <div class="seccion-contenedor">
+
+            <div class="seccion-encabezado">
+                <span class="seccion-badge">Nuestro producto</span>
+                <h2 class="seccion-titulo">Conoce CajaFacil</h2>
+                <p class="seccion-descripcion">
+                    Un sistema pensado desde cero para la realidad de las boticas peruanas.
+                    Sin complicaciones, sin necesitar internet, sin mensualidades obligatorias.
+                </p>
+            </div>
+
+            <!-- Cards de beneficios principales -->
+            <div class="producto-grid">
+
+                <div class="producto-card">
+                    <div class="producto-icono">💊</div>
+                    <h3>Hecho para boticas</h3>
+                    <p>Campos específicos para medicamentos: laboratorio, presentación, fecha de vencimiento y tipo (genérico o marca).</p>
+                </div>
+
+                <div class="producto-card">
+                    <div class="producto-icono">⚡</div>
+                    <h3>Fácil de usar</h3>
+                    <p>Interfaz intuitiva que cualquier persona puede aprender en menos de una hora, sin conocimientos de tecnología.</p>
+                </div>
+
+                <div class="producto-card">
+                    <div class="producto-icono">📶</div>
+                    <h3>Sin internet (local)</h3>
+                    <p>En el plan local funciona directo en tu PC, sin depender de internet ni de servidores externos. Tus datos son tuyos.</p>
+                </div>
+
+                <div class="producto-card">
+                    <div class="producto-icono">📲</div>
+                    <h3>Reporte por WhatsApp</h3>
+                    <p>Al cerrar la caja cada día, el sistema te envía automáticamente un resumen completo a tu WhatsApp.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         CARACTERÍSTICAS — Lista detallada de funciones
+    ============================================================ -->
+    <section class="caracteristicas" id="caracteristicas">
+        <div class="seccion-contenedor">
+
+            <div class="seccion-encabezado">
+                <span class="seccion-badge">Funcionalidades</span>
+                <h2 class="seccion-titulo">Todo lo que necesitas en un solo lugar</h2>
+            </div>
+
+            <div class="features-grid">
+
+                <!-- Columna izquierda: lista de features -->
+                <div class="features-lista">
+
+                    <div class="feature-item">
+                        <div class="feature-check">✓</div>
+                        <div>
+                            <h4>Registro de ventas rápido</h4>
+                            <p>Busca el medicamento, agrega al carrito y cobra en segundos. Acepta efectivo, Yape, Plin y tarjeta.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-check">✓</div>
+                        <div>
+                            <h4>Vuelto automático</h4>
+                            <p>Ingresa el monto recibido y el sistema calcula el vuelto al instante, sin errores.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-check">✓</div>
+                        <div>
+                            <h4>Cuadre de caja diario</h4>
+                            <p>Registra el fondo inicial, cuenta el efectivo al cerrar y el sistema detecta si falta o sobra dinero.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-check">✓</div>
+                        <div>
+                            <h4>Control de inventario</h4>
+                            <p>Gestiona todos tus medicamentos con alertas automáticas de stock bajo y productos por vencer en 30 días.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-check">✓</div>
+                        <div>
+                            <h4>Historial completo</h4>
+                            <p>Consulta ventas, gastos, entradas de mercadería y cierres de caja. Filtra por día, mes o año.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-check">✓</div>
+                        <div>
+                            <h4>Reporte nocturno por WhatsApp</h4>
+                            <p>Recibe automáticamente el resumen del día: ventas, gastos, ganancia real y estado del cuadre de caja.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Columna derecha: mockup de ventas -->
+                <div class="features-mockup">
+                    <div class="fm-contenedor">
+                        <div class="fm-titulo">🛒 Registrar venta</div>
+                        <div class="fm-buscador">
+                            <span>🔍</span>
+                            <span style="color:#9ca3af">Buscar medicamento...</span>
+                        </div>
+                        <div class="fm-resultado">
+                            <div>
+                                <div style="font-weight:600;font-size:13px">Paracetamol 500mg</div>
+                                <div style="font-size:11px;color:#6b7280">Roche · 30 unid.</div>
+                            </div>
+                            <span style="color:#16a34a;font-weight:700">S/1.50</span>
+                        </div>
+                        <div class="fm-carrito">
+                            <div class="fm-item">
+                                <span>Paracetamol 500mg</span>
+                                <div class="fm-controles">
+                                    <button>−</button>
+                                    <span>3</span>
+                                    <button>+</button>
+                                </div>
+                                <span style="color:#16a34a;font-weight:700">S/4.50</span>
+                            </div>
+                        </div>
+                        <div class="fm-metodos">
+                            <div class="fm-metodo activo">💵 Efectivo</div>
+                            <div class="fm-metodo">📱 Yape</div>
+                            <div class="fm-metodo">📱 Plin</div>
+                            <div class="fm-metodo">💳 Tarjeta</div>
+                        </div>
+                        <div class="fm-total">
+                            <span>Total</span>
+                            <strong>S/4.50</strong>
+                        </div>
+                        <button class="fm-btn">Registrar venta</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         DEMO — Sección de video (placeholder hasta tener video)
+    ============================================================ -->
+    <section class="demo" id="demo">
+        <div class="seccion-contenedor">
+
+            <div class="seccion-encabezado claro">
+                <span class="seccion-badge claro">Video demo</span>
+                <h2 class="seccion-titulo claro">Míralo en acción</h2>
+                <p class="seccion-descripcion claro">
+                    Agenda una demostración personalizada y te mostramos
+                    el sistema funcionando en tiempo real.
+                </p>
+            </div>
+
+            <!-- Placeholder del video -->
+            <div class="demo-video-wrapper">
+                <div class="demo-video-placeholder">
+                    <div class="demo-play">▶</div>
+                    <p>Video demo próximamente</p>
+                    <a href="https://wa.me/51929201444?text=Hola%2C%20quiero%20ver%20una%20demo%20de%20CajaFacil"
+                       target="_blank"
+                       class="btn-primario claro">
+                        💬 Solicitar demo en vivo
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         PRECIOS — Planes disponibles
+         Plan Local (pago único) y Plan Web (mensualidad)
+    ============================================================ -->
+    <section class="precios" id="precios">
+        <div class="seccion-contenedor">
+
+            <div class="seccion-encabezado">
+                <span class="seccion-badge">Precios</span>
+                <h2 class="seccion-titulo">Elige el plan que más te convenga</h2>
+                <p class="seccion-descripcion">
+                    Sin contratos ni letras pequeñas. Paga lo que necesitas.
+                </p>
+            </div>
+
+            <div class="precios-grid">
+
+                <!-- Plan Local -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <span class="plan-icono">💻</span>
+                        <h3 class="plan-nombre">Plan Local</h3>
+                        <p class="plan-descripcion">Instalado en tu PC, funciona sin internet</p>
+                    </div>
+                    <div class="plan-precio">
+                        <span class="plan-moneda">S/</span>
+                        <span class="plan-monto">350</span>
+                        <span class="plan-periodo">pago único</span>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✓ Instalación en tu computadora</li>
+                        <li>✓ Funciona sin internet</li>
+                        <li>✓ Tus datos son solo tuyos</li>
+                        <li>✓ Capacitación incluida (1-3 horas)</li>
+                        <li>✓ Soporte por WhatsApp 60 días</li>
+                        <li>✓ Actualizaciones menores incluidas</li>
+                        <li class="plan-feature-no">✗ Acceso desde celular</li>
+                        <li class="plan-feature-no">✗ Acceso desde múltiples PCs</li>
+                    </ul>
+                    <a href="https://wa.me/51929201444?text=Hola%2C%20quiero%20el%20Plan%20Local%20de%20CajaFacil"
+                       target="_blank"
+                       class="plan-btn secundario">
+                        Quiero este plan
+                    </a>
+                </div>
+
+                <!-- Plan Web (destacado) -->
+                <div class="plan-card destacado">
+                    <div class="plan-popular">⭐ Más popular</div>
+                    <div class="plan-header">
+                        <span class="plan-icono">🌐</span>
+                        <h3 class="plan-nombre">Plan Web</h3>
+                        <p class="plan-descripcion">Accede desde cualquier dispositivo</p>
+                    </div>
+                    <div class="plan-precio">
+                        <span class="plan-moneda">S/</span>
+                        <span class="plan-monto">79</span>
+                        <span class="plan-periodo">/mes</span>
+                    </div>
+                    <div class="plan-anual">o S/750/año — ahorras S/198</div>
+                    <ul class="plan-features">
+                        <li>✓ Acceso desde PC, celular o tablet</li>
+                        <li>✓ Sin instalar nada</li>
+                        <li>✓ Múltiples usuarios</li>
+                        <li>✓ Copias de seguridad automáticas</li>
+                        <li>✓ Soporte continuo por WhatsApp</li>
+                        <li>✓ Actualizaciones automáticas</li>
+                        <li>✓ Acceso desde cualquier lugar</li>
+                        <li>✓ Cancela cuando quieras</li>
+                    </ul>
+                    <a href="https://wa.me/51929201444?text=Hola%2C%20quiero%20el%20Plan%20Web%20de%20CajaFacil"
+                       target="_blank"
+                       class="plan-btn primario">
+                        Quiero este plan
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Nota de garantía -->
+            <p class="precios-garantia">
+                🔒 Prueba gratuita de 7 días en el Plan Web · Sin tarjeta de crédito
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         SOBRE NOSOTROS — Quiénes somos
+    ============================================================ -->
+    <section class="nosotros" id="nosotros">
+        <div class="seccion-contenedor">
+            <div class="nosotros-grid">
+
+                <div class="nosotros-texto">
+                    <span class="seccion-badge">Sobre VendeMas App</span>
+                    <h2 class="seccion-titulo">Tecnología accesible para negocios reales</h2>
+                    <p>
+                        Somos un equipo de desarrollo de software ubicado en Huánuco, Perú.
+                        Creamos soluciones digitales simples, económicas y efectivas para
+                        pequeños negocios que quieren crecer sin complicarse.
+                    </p>
+                    <p style="margin-top:16px">
+                        CajaFacil nació de entender la realidad de las boticas peruanas:
+                        poco tiempo, poco presupuesto y necesidad de control real del negocio.
+                        Por eso lo hicimos simple, directo y honesto en su precio.
+                    </p>
+                    <div class="nosotros-datos">
+                        <div class="nosotros-dato">
+                            <strong>📍</strong>
+                            <span>Huánuco, Perú</span>
+                        </div>
+                        <div class="nosotros-dato">
+                            <strong>💬</strong>
+                            <span>Soporte en español</span>
+                        </div>
+                        <div class="nosotros-dato">
+                            <strong>🇵🇪</strong>
+                            <span>Hecho para el mercado peruano</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nosotros-visual">
+                    <div class="nosotros-card">
+                        <div class="nosotros-card-icono">🚀</div>
+                        <h4>Nuestra misión</h4>
+                        <p>Digitalizar los negocios pequeños del Perú con herramientas simples, asequibles y útiles de verdad.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         CTA FINAL — Llamada a la acción principal
+    ============================================================ -->
+    <section class="cta-final" id="contacto">
+        <div class="seccion-contenedor">
+            <div class="cta-contenido">
+                <h2>¿Listo para organizar tu botica?</h2>
+                <p>Escríbenos por WhatsApp y te damos una demo gratis. Sin compromiso.</p>
+                <a href="https://wa.me/51929201444?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20CajaFacil%20para%20mi%20botica"
+                   target="_blank"
+                   class="cta-whatsapp">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    Escribir por WhatsApp
+                </a>
+                <p class="cta-numero">+51 929 201 444</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         FOOTER — Pie de página
+    ============================================================ -->
+    <footer class="footer">
+        <div class="footer-contenedor">
+
+            <div class="footer-marca">
+                <span class="footer-logo">VendeMas<span>App</span></span>
+                <p>Soluciones digitales para negocios</p>
+                <p>Huánuco, Perú · 2026</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#producto">Producto</a>
+                <a href="#caracteristicas">Características</a>
+                <a href="#precios">Precios</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+
+            <div class="footer-contacto">
+                <p>📱 +51 929 201 444</p>
+                <a href="https://wa.me/51929201444" target="_blank">WhatsApp</a>
+            </div>
+
+        </div>
+        <div class="footer-copy">
+            <p>© 2026 VendeMas App - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+
+    <!-- Botón flotante de WhatsApp (siempre visible) -->
+    <a href="https://wa.me/51929201444?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20CajaFacil"
+       target="_blank"
+       class="whatsapp-flotante"
+       aria-label="Contactar por WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- Script principal -->
+    <script src="script.js"></script>
+
+</body>
+</html>

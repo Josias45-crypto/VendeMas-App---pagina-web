@@ -2,588 +2,508 @@
 <html lang="es">
 <head>
     <!-- ============================================================
-         VendeMas App — Página web principal
-         Autor: Josias Rojas Alca
-         Descripción: Landing page de VendeMas App para presentar
-                      CajaFacil, sus características y planes.
-         Última actualización: 2026
+         Nexvora Systems — Página principal
+         Empresa: Nexvora Systems
+         Tagline: Las empresas que lideran el mundo, eligen Nexvora.
+         Producto estrella: VendeMas App
     ============================================================ -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexvora Systems — Las empresas que lideran el mundo, eligen Nexvora.</title>
+    <meta name="description" content="Nexvora Systems — Ingeniería de software de alto impacto. Sistemas POS, desarrollo a medida, apps móviles y soluciones web para empresas que lideran.">
+    <meta name="keywords" content="software empresarial, desarrollo a medida, sistema POS, apps móviles, Perú, VendeMas App">
+    <meta name="author" content="Nexvora Systems">
 
-    <!-- SEO básico -->
-    <title>VendeMas App — Soluciones digitales para negocios</title>
-    <meta name="description" content="CajaFacil: sistema POS para boticas y farmacias en Perú. Control de ventas, inventario, caja y reportes por WhatsApp. Desde S/350 pago único.">
-    <meta name="keywords" content="sistema POS botica, farmacia, software caja, Huanuco, Peru, CajaFacil, VendeMas">
-    <meta name="author" content="VendeMas App — Josias Rojas Alca">
-
-    <!-- Open Graph (para compartir en redes sociales) -->
-    <meta property="og:title" content="VendeMas App — CajaFacil para Boticas">
-    <meta property="og:description" content="Sistema POS para boticas y farmacias. Control total de tu negocio desde S/350.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Nexvora Systems">
+    <meta property="og:description" content="Las empresas que lideran el mundo, eligen Nexvora.">
     <meta property="og:type" content="website">
-    <meta property="og:locale" content="es_PE">
 
-    <!-- Fuentes de Google -->
+    <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-    <!-- Hoja de estilos principal -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- ============================================================
-         NAVBAR — Barra de navegación fija
-         Contiene: logo, links de navegación y botón de contacto
+         NAVBAR
     ============================================================ -->
     <nav class="navbar" id="navbar">
-        <div class="nav-contenedor">
-
-            <!-- Logo de VendeMas -->
+        <div class="nav-inner">
             <a href="#inicio" class="nav-logo">
-                <img src="logo.png" alt="VendeMas App" class="nav-logo-img" onerror="this.style.display='none'">
-                <span class="nav-logo-texto">VendeMas<span class="nav-logo-app">App</span></span>
+                <!-- Logo SVG órbita -->
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                    <circle cx="18" cy="18" r="17" stroke="#00D4FF" stroke-width="1.5"/>
+                    <circle cx="18" cy="18" r="11" stroke="#00D4FF" stroke-width="2"/>
+                    <circle cx="18" cy="18" r="5" fill="#00D4FF"/>
+                    <circle cx="18" cy="1" r="3" fill="#0F1F3D" stroke="#00D4FF" stroke-width="1.5"/>
+                    <circle cx="33" cy="27" r="2.5" fill="#0F1F3D" stroke="#00D4FF" stroke-width="1.5"/>
+                    <circle cx="3" cy="27" r="2" fill="#0F1F3D" stroke="#00D4FF" stroke-width="1.5"/>
+                </svg>
+                <span>Nexvora<strong>Systems</strong></span>
             </a>
 
-            <!-- Links de navegación (ocultos en móvil) -->
             <ul class="nav-links" id="nav-links">
+                <li><a href="#servicios" class="nav-link">Servicios</a></li>
                 <li><a href="#producto" class="nav-link">Producto</a></li>
-                <li><a href="#caracteristicas" class="nav-link">Características</a></li>
-                <li><a href="#precios" class="nav-link">Precios</a></li>
+                <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
                 <li><a href="#contacto" class="nav-link">Contacto</a></li>
             </ul>
 
-            <!-- Botón CTA de la navbar -->
-            <a href="https://wa.me/51929201444?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20CajaFacil"
-               target="_blank"
-               class="nav-cta">
-                Solicitar demo
+            <a href="https://wa.me/51929201444?text=Hola%2C%20quiero%20trabajar%20con%20Nexvora%20Systems"
+               target="_blank" class="nav-cta">
+                Hablar con un experto
             </a>
 
-            <!-- Botón hamburguesa para móvil -->
-            <button class="nav-hamburguesa" id="nav-hamburguesa" aria-label="Abrir menú">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="nav-hamburguesa" id="hamburguesa" aria-label="Menú">
+                <span></span><span></span><span></span>
             </button>
-
         </div>
     </nav>
 
 
     <!-- ============================================================
-         HERO — Sección principal de bienvenida
-         Objetivo: captar atención y comunicar propuesta de valor
+         HERO
     ============================================================ -->
     <section class="hero" id="inicio">
-        <div class="hero-contenedor">
+        <!-- Fondo animado de puntos -->
+        <div class="hero-grid"></div>
+        <div class="hero-orbe"></div>
 
-            <!-- Texto principal -->
-            <div class="hero-texto">
-                <span class="hero-badge">🇵🇪 Hecho en Perú para Perú</span>
+        <div class="hero-inner">
+            <div class="hero-contenido">
+                <div class="hero-badge">
+                    <span class="badge-punto"></span>
+                    Nexvora Systems — Huánuco, Perú
+                </div>
+
                 <h1 class="hero-titulo">
-                    Tu botica,
-                    <span class="hero-titulo-acento">organizada</span>
-                    y bajo control
+                    Las empresas que<br>
+                    <span class="titulo-acento">lideran el mundo,</span><br>
+                    eligen Nexvora.
                 </h1>
-                <p class="hero-descripcion">
-                    CajaFacil es el sistema POS diseñado especialmente para boticas
-                    y farmacias pequeñas. Controla tus ventas, inventario y caja
-                    desde una sola pantalla, sin complicaciones.
+
+                <p class="hero-subtitulo">
+                    Ingeniería de software de alto impacto. Construimos sistemas, aplicaciones
+                    y soluciones digitales que dan a tu empresa la ventaja competitiva
+                    que necesita para dominar su mercado.
                 </p>
 
-                <!-- Botones de acción -->
-                <div class="hero-botones">
-                    <a href="https://wa.me/51929201444?text=Hola%2C%20quiero%20una%20demo%20de%20CajaFacil"
-                       target="_blank"
+                <div class="hero-acciones">
+                    <a href="#contacto"
                        class="btn-primario">
-                        💬 Quiero una demo gratis
+                        Agendar consulta gratuita
                     </a>
-                    <a href="#precios" class="btn-secundario">
-                        Ver precios →
+                    <a href="#producto" class="btn-ghost">
+                        Ver VendeMas App →
                     </a>
                 </div>
 
-                <!-- Estadísticas rápidas -->
-                <div class="hero-stats">
-                    <div class="hero-stat">
-                        <strong>S/350</strong>
-                        <span>Pago único</span>
+                <!-- Métricas -->
+                <div class="hero-metricas">
+                    <div class="metrica">
+                        <strong>100%</strong>
+                        <span>Código a medida</span>
                     </div>
-                    <div class="hero-stat-divider"></div>
-                    <div class="hero-stat">
-                        <strong>S/79</strong>
-                        <span>Por mes (web)</span>
-                    </div>
-                    <div class="hero-stat-divider"></div>
-                    <div class="hero-stat">
+                    <div class="metrica-div"></div>
+                    <div class="metrica">
                         <strong>24/7</strong>
-                        <span>Soporte WhatsApp</span>
+                        <span>Soporte técnico</span>
+                    </div>
+                    <div class="metrica-div"></div>
+                    <div class="metrica">
+                        <strong>+5</strong>
+                        <span>Años de experiencia</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Imagen / mockup del sistema -->
-            <div class="hero-imagen">
-                <div class="hero-mockup">
-                    <!-- Barra superior del mockup -->
-                    <div class="mockup-topbar">
-                        <div class="mockup-dots">
-                            <span></span><span></span><span></span>
-                        </div>
-                        <span class="mockup-url">localhost:5000</span>
-                    </div>
-                    <!-- Contenido del mockup -->
-                    <div class="mockup-contenido">
-                        <div class="mockup-sidebar">
-                            <div class="mockup-logo-sm">CF</div>
-                            <div class="mockup-nav-item activo">Inicio</div>
-                            <div class="mockup-nav-item">Ventas</div>
-                            <div class="mockup-nav-item">Caja</div>
-                            <div class="mockup-nav-item">Inventario</div>
-                            <div class="mockup-nav-item">Historial</div>
-                        </div>
-                        <div class="mockup-main">
-                            <div class="mockup-header">Buenos días 👋</div>
-                            <div class="mockup-cards">
-                                <div class="mockup-card verde">
-                                    <div class="mockup-card-label">Ventas hoy</div>
-                                    <div class="mockup-card-val">S/248.00</div>
-                                </div>
-                                <div class="mockup-card azul">
-                                    <div class="mockup-card-label">Transacciones</div>
-                                    <div class="mockup-card-val">12</div>
-                                </div>
-                                <div class="mockup-card naranja">
-                                    <div class="mockup-card-label">Stock bajo</div>
-                                    <div class="mockup-card-val">3</div>
-                                </div>
-                                <div class="mockup-card rojo">
-                                    <div class="mockup-card-label">Por vencer</div>
-                                    <div class="mockup-card-val">1</div>
-                                </div>
-                            </div>
-                            <div class="mockup-lista-titulo">Últimas ventas</div>
-                            <div class="mockup-venta">
-                                <span>Paracetamol 500mg x3</span>
-                                <span class="mockup-badge yape">Yape</span>
-                                <span class="mockup-monto">S/4.50</span>
-                            </div>
-                            <div class="mockup-venta">
-                                <span>Amoxicilina 500mg x1</span>
-                                <span class="mockup-badge ef">Efectivo</span>
-                                <span class="mockup-monto">S/8.00</span>
-                            </div>
-                            <div class="mockup-venta">
-                                <span>Ibuprofeno 400mg x2</span>
-                                <span class="mockup-badge plin">Plin</span>
-                                <span class="mockup-monto">S/6.00</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Efecto de brillo detrás del mockup -->
-                <div class="hero-glow"></div>
+            <!-- Logo grande decorativo -->
+            <div class="hero-logo-deco">
+                <svg width="360" height="360" viewBox="0 0 360 360" fill="none">
+                    <circle cx="180" cy="180" r="170" stroke="#00D4FF" stroke-width="0.5" opacity="0.2"/>
+                    <circle cx="180" cy="180" r="130" stroke="#00D4FF" stroke-width="1" opacity="0.3"/>
+                    <circle cx="180" cy="180" r="90" stroke="#00D4FF" stroke-width="1.5" opacity="0.5"/>
+                    <circle cx="180" cy="180" r="55" stroke="#00D4FF" stroke-width="2" opacity="0.7"/>
+                    <circle cx="180" cy="180" r="22" fill="#00D4FF" opacity="0.9"/>
+                    <!-- Nodos -->
+                    <circle cx="180" cy="10" r="10" fill="#0F1F3D" stroke="#00D4FF" stroke-width="2"/>
+                    <circle cx="350" cy="180" r="8" fill="#0F1F3D" stroke="#00D4FF" stroke-width="1.5"/>
+                    <circle cx="10" cy="180" r="7" fill="#0F1F3D" stroke="#00D4FF" stroke-width="1.5"/>
+                    <circle cx="310" cy="60" r="5" fill="#00D4FF" opacity="0.6"/>
+                    <circle cx="50" cy="300" r="5" fill="#00D4FF" opacity="0.6"/>
+                    <circle cx="300" cy="310" r="4" fill="#00D4FF" opacity="0.4"/>
+                    <!-- Líneas conectoras -->
+                    <line x1="180" y1="10" x2="180" y2="90" stroke="#00D4FF" stroke-width="0.5" opacity="0.4"/>
+                    <line x1="350" y1="180" x2="270" y2="180" stroke="#00D4FF" stroke-width="0.5" opacity="0.4"/>
+                </svg>
             </div>
+        </div>
 
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-linea"></div>
         </div>
     </section>
 
 
     <!-- ============================================================
-         PRODUCTO — Qué es CajaFacil y para quién es
+         SERVICIOS
+    ============================================================ -->
+    <section class="servicios" id="servicios">
+        <div class="seccion-inner">
+
+            <div class="seccion-header">
+                <span class="seccion-label">Lo que hacemos</span>
+                <h2 class="seccion-titulo">Soluciones de software<br>para cada desafío empresarial</h2>
+            </div>
+
+            <div class="servicios-grid">
+
+                <div class="servicio-card">
+                    <div class="servicio-numero">01</div>
+                    <div class="servicio-icono">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <rect x="2" y="6" width="24" height="16" rx="2" stroke="#00D4FF" stroke-width="1.5"/>
+                            <line x1="8" y1="12" x2="20" y2="12" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
+                            <line x1="8" y1="16" x2="14" y2="16" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Sistemas POS</h3>
+                    <p>Sistemas de punto de venta diseñados específicamente para tu industria. Control total de ventas, inventario y caja en una sola plataforma.</p>
+                    <span class="servicio-tag">Producto estrella: VendeMas App</span>
+                </div>
+
+                <div class="servicio-card">
+                    <div class="servicio-numero">02</div>
+                    <div class="servicio-icono">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <polyline points="4,20 10,12 16,16 24,6" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <circle cx="24" cy="6" r="2" fill="#00D4FF"/>
+                        </svg>
+                    </div>
+                    <h3>Desarrollo a medida</h3>
+                    <p>Construimos el software exacto que tu empresa necesita. Desde sistemas de gestión empresarial hasta plataformas complejas de alto tráfico.</p>
+                    <span class="servicio-tag">Bajo tu requerimiento</span>
+                </div>
+
+                <div class="servicio-card">
+                    <div class="servicio-numero">03</div>
+                    <div class="servicio-icono">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <rect x="8" y="2" width="12" height="22" rx="2" stroke="#00D4FF" stroke-width="1.5"/>
+                            <line x1="12" y1="20" x2="16" y2="20" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Apps móviles</h3>
+                    <p>Aplicaciones iOS y Android que conectan tu negocio con tus clientes. Diseño profesional, rendimiento óptimo y experiencia de usuario superior.</p>
+                    <span class="servicio-tag">iOS y Android</span>
+                </div>
+
+                <div class="servicio-card">
+                    <div class="servicio-numero">04</div>
+                    <div class="servicio-icono">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <circle cx="14" cy="14" r="11" stroke="#00D4FF" stroke-width="1.5"/>
+                            <ellipse cx="14" cy="14" rx="5" ry="11" stroke="#00D4FF" stroke-width="1.5"/>
+                            <line x1="3" y1="14" x2="25" y2="14" stroke="#00D4FF" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3>Soluciones web</h3>
+                    <p>Plataformas web escalables, e-commerce, dashboards y sistemas en la nube. Tu presencia digital construida con tecnología de vanguardia.</p>
+                    <span class="servicio-tag">Cloud ready</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         PRODUCTO ESTRELLA — VendeMas App
     ============================================================ -->
     <section class="producto" id="producto">
-        <div class="seccion-contenedor">
+        <div class="seccion-inner">
 
-            <div class="seccion-encabezado">
-                <span class="seccion-badge">Nuestro producto</span>
-                <h2 class="seccion-titulo">Conoce CajaFacil</h2>
-                <p class="seccion-descripcion">
-                    Un sistema pensado desde cero para la realidad de las boticas peruanas.
-                    Sin complicaciones, sin necesitar internet, sin mensualidades obligatorias.
-                </p>
-            </div>
+            <div class="producto-contenido">
+                <div class="producto-texto">
+                    <span class="seccion-label claro">Producto estrella</span>
+                    <h2 class="seccion-titulo claro">VendeMas App</h2>
+                    <p class="producto-desc">
+                        El sistema POS más completo para boticas y farmacias del Perú.
+                        Control de ventas, inventario, caja diaria y reportes automáticos
+                        por WhatsApp — todo desde una sola pantalla.
+                    </p>
 
-            <!-- Cards de beneficios principales -->
-            <div class="producto-grid">
+                    <ul class="producto-features">
+                        <li>
+                            <span class="feature-check">✓</span>
+                            Registro de ventas con 4 métodos de pago
+                        </li>
+                        <li>
+                            <span class="feature-check">✓</span>
+                            Control de inventario con alertas de vencimiento
+                        </li>
+                        <li>
+                            <span class="feature-check">✓</span>
+                            Cuadre de caja diario automático
+                        </li>
+                        <li>
+                            <span class="feature-check">✓</span>
+                            Reporte nocturno por WhatsApp
+                        </li>
+                        <li>
+                            <span class="feature-check">✓</span>
+                            Historial completo con filtros avanzados
+                        </li>
+                    </ul>
 
-                <div class="producto-card">
-                    <div class="producto-icono">💊</div>
-                    <h3>Hecho para boticas</h3>
-                    <p>Campos específicos para medicamentos: laboratorio, presentación, fecha de vencimiento y tipo (genérico o marca).</p>
+                    <div class="producto-planes">
+                        <div class="plan">
+                            <span class="plan-tipo">Local</span>
+                            <span class="plan-precio">S/350 <small>pago único</small></span>
+                        </div>
+                        <div class="plan-div"></div>
+                        <div class="plan">
+                            <span class="plan-tipo">Web</span>
+                            <span class="plan-precio">S/79 <small>/mes</small></span>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/51929201444?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20VendeMas%20App"
+                       target="_blank" class="btn-primario">
+                        Solicitar demo de VendeMas App
+                    </a>
                 </div>
 
-                <div class="producto-card">
-                    <div class="producto-icono">⚡</div>
-                    <h3>Fácil de usar</h3>
-                    <p>Interfaz intuitiva que cualquier persona puede aprender en menos de una hora, sin conocimientos de tecnología.</p>
-                </div>
-
-                <div class="producto-card">
-                    <div class="producto-icono">📶</div>
-                    <h3>Sin internet (local)</h3>
-                    <p>En el plan local funciona directo en tu PC, sin depender de internet ni de servidores externos. Tus datos son tuyos.</p>
-                </div>
-
-                <div class="producto-card">
-                    <div class="producto-icono">📲</div>
-                    <h3>Reporte por WhatsApp</h3>
-                    <p>Al cerrar la caja cada día, el sistema te envía automáticamente un resumen completo a tu WhatsApp.</p>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- ============================================================
-         CARACTERÍSTICAS — Lista detallada de funciones
-    ============================================================ -->
-    <section class="caracteristicas" id="caracteristicas">
-        <div class="seccion-contenedor">
-
-            <div class="seccion-encabezado">
-                <span class="seccion-badge">Funcionalidades</span>
-                <h2 class="seccion-titulo">Todo lo que necesitas en un solo lugar</h2>
-            </div>
-
-            <div class="features-grid">
-
-                <!-- Columna izquierda: lista de features -->
-                <div class="features-lista">
-
-                    <div class="feature-item">
-                        <div class="feature-check">✓</div>
-                        <div>
-                            <h4>Registro de ventas rápido</h4>
-                            <p>Busca el medicamento, agrega al carrito y cobra en segundos. Acepta efectivo, Yape, Plin y tarjeta.</p>
+                <!-- Mockup -->
+                <div class="producto-mockup">
+                    <div class="mockup-frame">
+                        <div class="mockup-barra">
+                            <span class="dot r"></span>
+                            <span class="dot y"></span>
+                            <span class="dot g"></span>
+                            <span class="mockup-url-text">vendemас.app</span>
                         </div>
-                    </div>
-
-                    <div class="feature-item">
-                        <div class="feature-check">✓</div>
-                        <div>
-                            <h4>Vuelto automático</h4>
-                            <p>Ingresa el monto recibido y el sistema calcula el vuelto al instante, sin errores.</p>
-                        </div>
-                    </div>
-
-                    <div class="feature-item">
-                        <div class="feature-check">✓</div>
-                        <div>
-                            <h4>Cuadre de caja diario</h4>
-                            <p>Registra el fondo inicial, cuenta el efectivo al cerrar y el sistema detecta si falta o sobra dinero.</p>
-                        </div>
-                    </div>
-
-                    <div class="feature-item">
-                        <div class="feature-check">✓</div>
-                        <div>
-                            <h4>Control de inventario</h4>
-                            <p>Gestiona todos tus medicamentos con alertas automáticas de stock bajo y productos por vencer en 30 días.</p>
-                        </div>
-                    </div>
-
-                    <div class="feature-item">
-                        <div class="feature-check">✓</div>
-                        <div>
-                            <h4>Historial completo</h4>
-                            <p>Consulta ventas, gastos, entradas de mercadería y cierres de caja. Filtra por día, mes o año.</p>
-                        </div>
-                    </div>
-
-                    <div class="feature-item">
-                        <div class="feature-check">✓</div>
-                        <div>
-                            <h4>Reporte nocturno por WhatsApp</h4>
-                            <p>Recibe automáticamente el resumen del día: ventas, gastos, ganancia real y estado del cuadre de caja.</p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Columna derecha: mockup de ventas -->
-                <div class="features-mockup">
-                    <div class="fm-contenedor">
-                        <div class="fm-titulo">🛒 Registrar venta</div>
-                        <div class="fm-buscador">
-                            <span>🔍</span>
-                            <span style="color:#9ca3af">Buscar medicamento...</span>
-                        </div>
-                        <div class="fm-resultado">
-                            <div>
-                                <div style="font-weight:600;font-size:13px">Paracetamol 500mg</div>
-                                <div style="font-size:11px;color:#6b7280">Roche · 30 unid.</div>
+                        <div class="mockup-body">
+                            <div class="mockup-sidebar">
+                                <div class="ms-logo">VM</div>
+                                <div class="ms-item active">Inicio</div>
+                                <div class="ms-item">Ventas</div>
+                                <div class="ms-item">Caja</div>
+                                <div class="ms-item">Inventario</div>
+                                <div class="ms-item">Historial</div>
                             </div>
-                            <span style="color:#16a34a;font-weight:700">S/1.50</span>
-                        </div>
-                        <div class="fm-carrito">
-                            <div class="fm-item">
-                                <span>Paracetamol 500mg</span>
-                                <div class="fm-controles">
-                                    <button>−</button>
-                                    <span>3</span>
-                                    <button>+</button>
+                            <div class="mockup-main">
+                                <div class="mm-title">Buenos días 👋</div>
+                                <div class="mm-cards">
+                                    <div class="mm-card">
+                                        <div class="mm-label">Ventas hoy</div>
+                                        <div class="mm-val" style="color:#00D4FF">S/248</div>
+                                    </div>
+                                    <div class="mm-card">
+                                        <div class="mm-label">Transacciones</div>
+                                        <div class="mm-val">12</div>
+                                    </div>
+                                    <div class="mm-card">
+                                        <div class="mm-label">Stock bajo</div>
+                                        <div class="mm-val" style="color:#f59e0b">3</div>
+                                    </div>
+                                    <div class="mm-card">
+                                        <div class="mm-label">Por vencer</div>
+                                        <div class="mm-val" style="color:#ef4444">1</div>
+                                    </div>
                                 </div>
-                                <span style="color:#16a34a;font-weight:700">S/4.50</span>
+                                <div class="mm-ventas-titulo">Últimas ventas</div>
+                                <div class="mm-venta">
+                                    <span>Paracetamol 500mg x3</span>
+                                    <span class="mm-badge yape">Yape</span>
+                                    <span class="mm-monto">S/4.50</span>
+                                </div>
+                                <div class="mm-venta">
+                                    <span>Amoxicilina 500mg x1</span>
+                                    <span class="mm-badge ef">Efectivo</span>
+                                    <span class="mm-monto">S/8.00</span>
+                                </div>
+                                <div class="mm-venta">
+                                    <span>Ibuprofeno 400mg x2</span>
+                                    <span class="mm-badge plin">Plin</span>
+                                    <span class="mm-monto">S/6.00</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="fm-metodos">
-                            <div class="fm-metodo activo">💵 Efectivo</div>
-                            <div class="fm-metodo">📱 Yape</div>
-                            <div class="fm-metodo">📱 Plin</div>
-                            <div class="fm-metodo">💳 Tarjeta</div>
-                        </div>
-                        <div class="fm-total">
-                            <span>Total</span>
-                            <strong>S/4.50</strong>
-                        </div>
-                        <button class="fm-btn">Registrar venta</button>
                     </div>
+                    <div class="mockup-glow"></div>
                 </div>
-
             </div>
         </div>
     </section>
 
 
     <!-- ============================================================
-         DEMO — Sección de video (placeholder hasta tener video)
+         POR QUÉ NEXVORA
     ============================================================ -->
-    <section class="demo" id="demo">
-        <div class="seccion-contenedor">
+    <section class="porque" id="nosotros">
+        <div class="seccion-inner">
 
-            <div class="seccion-encabezado claro">
-                <span class="seccion-badge claro">Video demo</span>
-                <h2 class="seccion-titulo claro">Míralo en acción</h2>
-                <p class="seccion-descripcion claro">
-                    Agenda una demostración personalizada y te mostramos
-                    el sistema funcionando en tiempo real.
-                </p>
+            <div class="seccion-header">
+                <span class="seccion-label">Por qué elegirnos</span>
+                <h2 class="seccion-titulo">No somos un proveedor.<br>Somos tu ventaja competitiva.</h2>
             </div>
 
-            <!-- Placeholder del video -->
-            <div class="demo-video-wrapper">
-                <div class="demo-video-placeholder">
-                    <div class="demo-play">▶</div>
-                    <p>Video demo próximamente</p>
-                    <a href="https://wa.me/51929201444?text=Hola%2C%20quiero%20ver%20una%20demo%20de%20CajaFacil"
-                       target="_blank"
-                       class="btn-primario claro">
-                        💬 Solicitar demo en vivo
-                    </a>
+            <div class="porque-grid">
+                <div class="porque-item">
+                    <div class="porque-icono">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L14.5 9H22L16 13.5L18.5 20.5L12 16L5.5 20.5L8 13.5L2 9H9.5L12 2Z" stroke="#00D4FF" stroke-width="1.5" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h4>Ingeniería de primer nivel</h4>
+                    <p>Nuestro equipo de ingenieros construye software con los más altos estándares de calidad, escalabilidad y seguridad.</p>
+                </div>
+                <div class="porque-item">
+                    <div class="porque-icono">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="#00D4FF" stroke-width="1.5"/>
+                            <polyline points="12,6 12,12 16,14" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4>Entrega a tiempo</h4>
+                    <p>Metodologías ágiles que garantizan entregas puntuales. Tu proyecto siempre en tiempo y dentro del presupuesto acordado.</p>
+                </div>
+                <div class="porque-item">
+                    <div class="porque-icono">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#00D4FF" stroke-width="1.5" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h4>Soporte garantizado</h4>
+                    <p>No desaparecemos después de entregar. Soporte técnico continuo para que tu software siempre funcione al 100%.</p>
+                </div>
+                <div class="porque-item">
+                    <div class="porque-icono">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="8" r="4" stroke="#00D4FF" stroke-width="1.5"/>
+                            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4>Equipo especializado</h4>
+                    <p>Ingenieros de software con experiencia en múltiples industrias. Entendemos tu negocio antes de escribir una sola línea de código.</p>
+                </div>
+                <div class="porque-item">
+                    <div class="porque-icono">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect x="2" y="3" width="20" height="14" rx="2" stroke="#00D4FF" stroke-width="1.5"/>
+                            <line x1="8" y1="21" x2="16" y2="21" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
+                            <line x1="12" y1="17" x2="12" y2="21" stroke="#00D4FF" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h4>Tecnología moderna</h4>
+                    <p>Utilizamos las tecnologías más avanzadas del mercado. Tu software construido para durar y escalar con tu empresa.</p>
+                </div>
+                <div class="porque-item">
+                    <div class="porque-icono">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" stroke="#00D4FF" stroke-width="1.5"/>
+                            <polyline points="8,12 11,15 16,9" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h4>Resultados medibles</h4>
+                    <p>No prometemos tecnología, prometemos resultados. Cada proyecto tiene métricas de éxito claras desde el primer día.</p>
                 </div>
             </div>
-
         </div>
     </section>
 
 
     <!-- ============================================================
-         PRECIOS — Planes disponibles
-         Plan Local (pago único) y Plan Web (mensualidad)
+         CTA FINAL
     ============================================================ -->
-    <section class="precios" id="precios">
-        <div class="seccion-contenedor">
-
-            <div class="seccion-encabezado">
-                <span class="seccion-badge">Precios</span>
-                <h2 class="seccion-titulo">Elige el plan que más te convenga</h2>
-                <p class="seccion-descripcion">
-                    Sin contratos ni letras pequeñas. Paga lo que necesitas.
-                </p>
-            </div>
-
-            <div class="precios-grid">
-
-                <!-- Plan Local -->
-                <div class="plan-card">
-                    <div class="plan-header">
-                        <span class="plan-icono">💻</span>
-                        <h3 class="plan-nombre">Plan Local</h3>
-                        <p class="plan-descripcion">Instalado en tu PC, funciona sin internet</p>
-                    </div>
-                    <div class="plan-precio">
-                        <span class="plan-moneda">S/</span>
-                        <span class="plan-monto">350</span>
-                        <span class="plan-periodo">pago único</span>
-                    </div>
-                    <ul class="plan-features">
-                        <li>✓ Instalación en tu computadora</li>
-                        <li>✓ Funciona sin internet</li>
-                        <li>✓ Tus datos son solo tuyos</li>
-                        <li>✓ Capacitación incluida (1-3 horas)</li>
-                        <li>✓ Soporte por WhatsApp 60 días</li>
-                        <li>✓ Actualizaciones menores incluidas</li>
-                        <li class="plan-feature-no">✗ Acceso desde celular</li>
-                        <li class="plan-feature-no">✗ Acceso desde múltiples PCs</li>
-                    </ul>
-                    <a href="https://wa.me/51929201444?text=Hola%2C%20quiero%20el%20Plan%20Local%20de%20CajaFacil"
-                       target="_blank"
-                       class="plan-btn secundario">
-                        Quiero este plan
-                    </a>
-                </div>
-
-                <!-- Plan Web (destacado) -->
-                <div class="plan-card destacado">
-                    <div class="plan-popular">⭐ Más popular</div>
-                    <div class="plan-header">
-                        <span class="plan-icono">🌐</span>
-                        <h3 class="plan-nombre">Plan Web</h3>
-                        <p class="plan-descripcion">Accede desde cualquier dispositivo</p>
-                    </div>
-                    <div class="plan-precio">
-                        <span class="plan-moneda">S/</span>
-                        <span class="plan-monto">79</span>
-                        <span class="plan-periodo">/mes</span>
-                    </div>
-                    <div class="plan-anual">o S/750/año — ahorras S/198</div>
-                    <ul class="plan-features">
-                        <li>✓ Acceso desde PC, celular o tablet</li>
-                        <li>✓ Sin instalar nada</li>
-                        <li>✓ Múltiples usuarios</li>
-                        <li>✓ Copias de seguridad automáticas</li>
-                        <li>✓ Soporte continuo por WhatsApp</li>
-                        <li>✓ Actualizaciones automáticas</li>
-                        <li>✓ Acceso desde cualquier lugar</li>
-                        <li>✓ Cancela cuando quieras</li>
-                    </ul>
-                    <a href="https://wa.me/51929201444?text=Hola%2C%20quiero%20el%20Plan%20Web%20de%20CajaFacil"
-                       target="_blank"
-                       class="plan-btn primario">
-                        Quiero este plan
-                    </a>
-                </div>
-
-            </div>
-
-            <!-- Nota de garantía -->
-            <p class="precios-garantia">
-                🔒 Prueba gratuita de 7 días en el Plan Web · Sin tarjeta de crédito
+    <section class="cta" id="contacto">
+        <div class="cta-inner">
+            <div class="cta-linea-deco"></div>
+            <span class="seccion-label claro">Da el siguiente paso</span>
+            <h2 class="cta-titulo">
+                Tu competencia ya está<br>
+                <span class="titulo-acento">tomando decisiones inteligentes.</span><br>
+                ¿Y tú?
+            </h2>
+            <p class="cta-desc">
+                Una consulta gratuita de 30 minutos puede cambiar el rumbo de tu empresa.
+                Sin compromiso. Sin tecnicismos. Solo soluciones.
             </p>
-
+            <a href="https://wa.me/51929201444?text=Hola%20Nexvora%20Systems%2C%20quiero%20agendar%20una%20consulta%20gratuita"
+               target="_blank" class="btn-cta">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                Agendar consulta gratuita por WhatsApp
+            </a>
+            <p class="cta-contacto">+51 929 201 444 · Huánuco, Perú</p>
         </div>
     </section>
 
 
     <!-- ============================================================
-         SOBRE NOSOTROS — Quiénes somos
-    ============================================================ -->
-    <section class="nosotros" id="nosotros">
-        <div class="seccion-contenedor">
-            <div class="nosotros-grid">
-
-                <div class="nosotros-texto">
-                    <span class="seccion-badge">Sobre VendeMas App</span>
-                    <h2 class="seccion-titulo">Tecnología accesible para negocios reales</h2>
-                    <p>
-                        Somos un equipo de desarrollo de software ubicado en Huánuco, Perú.
-                        Creamos soluciones digitales simples, económicas y efectivas para
-                        pequeños negocios que quieren crecer sin complicarse.
-                    </p>
-                    <p style="margin-top:16px">
-                        CajaFacil nació de entender la realidad de las boticas peruanas:
-                        poco tiempo, poco presupuesto y necesidad de control real del negocio.
-                        Por eso lo hicimos simple, directo y honesto en su precio.
-                    </p>
-                    <div class="nosotros-datos">
-                        <div class="nosotros-dato">
-                            <strong>📍</strong>
-                            <span>Huánuco, Perú</span>
-                        </div>
-                        <div class="nosotros-dato">
-                            <strong>💬</strong>
-                            <span>Soporte en español</span>
-                        </div>
-                        <div class="nosotros-dato">
-                            <strong>🇵🇪</strong>
-                            <span>Hecho para el mercado peruano</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="nosotros-visual">
-                    <div class="nosotros-card">
-                        <div class="nosotros-card-icono">🚀</div>
-                        <h4>Nuestra misión</h4>
-                        <p>Digitalizar los negocios pequeños del Perú con herramientas simples, asequibles y útiles de verdad.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ============================================================
-         CTA FINAL — Llamada a la acción principal
-    ============================================================ -->
-    <section class="cta-final" id="contacto">
-        <div class="seccion-contenedor">
-            <div class="cta-contenido">
-                <h2>¿Listo para organizar tu botica?</h2>
-                <p>Escríbenos por WhatsApp y te damos una demo gratis. Sin compromiso.</p>
-                <a href="https://wa.me/51929201444?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20CajaFacil%20para%20mi%20botica"
-                   target="_blank"
-                   class="cta-whatsapp">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                    </svg>
-                    Escribir por WhatsApp
-                </a>
-                <p class="cta-numero">+51 929 201 444</p>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ============================================================
-         FOOTER — Pie de página
+         FOOTER
     ============================================================ -->
     <footer class="footer">
-        <div class="footer-contenedor">
-
+        <div class="footer-inner">
             <div class="footer-marca">
-                <span class="footer-logo">VendeMas<span>App</span></span>
-                <p>Soluciones digitales para negocios</p>
-                <p>Huánuco, Perú · 2026</p>
+                <div class="footer-logo">
+                    <svg width="28" height="28" viewBox="0 0 36 36" fill="none">
+                        <circle cx="18" cy="18" r="17" stroke="#00D4FF" stroke-width="1.5"/>
+                        <circle cx="18" cy="18" r="11" stroke="#00D4FF" stroke-width="2"/>
+                        <circle cx="18" cy="18" r="5" fill="#00D4FF"/>
+                        <circle cx="18" cy="1" r="3" fill="#0F1F3D" stroke="#00D4FF" stroke-width="1.5"/>
+                        <circle cx="33" cy="27" r="2.5" fill="#0F1F3D" stroke="#00D4FF" stroke-width="1.5"/>
+                        <circle cx="3" cy="27" r="2" fill="#0F1F3D" stroke="#00D4FF" stroke-width="1.5"/>
+                    </svg>
+                    <span>Nexvora<strong>Systems</strong></span>
+                </div>
+                <p>Las empresas que lideran el mundo, eligen Nexvora.</p>
+                <p style="margin-top:8px; color:#334155">Huánuco, Perú · 2026</p>
             </div>
 
-            <div class="footer-links">
-                <a href="#producto">Producto</a>
-                <a href="#caracteristicas">Características</a>
-                <a href="#precios">Precios</a>
-                <a href="#contacto">Contacto</a>
+            <div class="footer-nav">
+                <h5>Servicios</h5>
+                <a href="#servicios">Sistemas POS</a>
+                <a href="#servicios">Desarrollo a medida</a>
+                <a href="#servicios">Apps móviles</a>
+                <a href="#servicios">Soluciones web</a>
             </div>
 
-            <div class="footer-contacto">
-                <p>📱 +51 929 201 444</p>
+            <div class="footer-nav">
+                <h5>Productos</h5>
+                <a href="#producto">VendeMas App</a>
+                <a href="#producto">CajaFacil</a>
+            </div>
+
+            <div class="footer-nav">
+                <h5>Contacto</h5>
                 <a href="https://wa.me/51929201444" target="_blank">WhatsApp</a>
+                <a href="#contacto">Consulta gratuita</a>
+                <p style="color:#475569; margin-top:8px; font-size:13px">+51 929 201 444</p>
             </div>
-
         </div>
+
         <div class="footer-copy">
-            <p>© 2026 VendeMas App - Todos los derechos reservados.</p>
+            <p>© 2026 Nexvora Systems. Todos los derechos reservados.</p>
         </div>
     </footer>
 
 
-    <!-- Botón flotante de WhatsApp (siempre visible) -->
-    <a href="https://wa.me/51929201444?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20CajaFacil"
-       target="_blank"
-       class="whatsapp-flotante"
-       aria-label="Contactar por WhatsApp">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+    <!-- WhatsApp flotante -->
+    <a href="https://wa.me/51929201444?text=Hola%20Nexvora%20Systems"
+       target="_blank" class="wa-flotante" aria-label="WhatsApp">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="white">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>
     </a>
 
-    <!-- Script principal -->
     <script src="script.js"></script>
-
 </body>
 </html>

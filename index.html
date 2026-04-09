@@ -1,510 +1,622 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- ============================================================
-         Nexvora Systems — Página principal
-         Empresa: Nexvora Systems
-         Tagline: Las empresas que lideran el mundo, eligen Nexvora.
-         Producto estrella: VendeMas App
-    ============================================================ -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nexvora Systems — Las empresas que lideran el mundo, eligen Nexvora.</title>
-    <meta name="description" content="Nexvora Systems — Ingeniería de software de alto impacto. Sistemas POS, desarrollo a medida, apps móviles y soluciones web para empresas que lideran.">
-    <meta name="keywords" content="software empresarial, desarrollo a medida, sistema POS, apps móviles, Perú, VendeMas App">
+    <meta name="description" content="Nexvora Systems — Empresa de software a medida en Huánuco, Perú. Sistemas POS, apps móviles, desarrollo web y soluciones empresariales de alto impacto.">
+    <meta name="keywords" content="software a medida Huanuco, desarrollo software Peru, sistema POS botica, VendeMas App, Nexvora Systems">
     <meta name="author" content="Nexvora Systems">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Nexvora Systems">
+    <meta property="og:title" content="Nexvora Systems — Software de alto impacto">
     <meta property="og:description" content="Las empresas que lideran el mundo, eligen Nexvora.">
     <meta property="og:type" content="website">
-
-    <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <canvas id="canvas-bg"></canvas>
 
-    <!-- ============================================================
-         NAVBAR
-    ============================================================ -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-inner">
-            <a href="#inicio" class="nav-logo">
-                <!-- Logo SVG órbita -->
-                <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+<canvas id="canvas-bg"></canvas>
+
+<!-- ============================================================
+     NAVBAR
+============================================================ -->
+<nav class="navbar" id="navbar">
+    <div class="nav-inner">
+        <a href="#inicio" class="nav-logo">
+            <svg width="34" height="34" viewBox="0 0 36 36" fill="none">
+                <circle cx="18" cy="18" r="17" stroke="#00D4FF" stroke-width="1.5"/>
+                <circle cx="18" cy="18" r="11" stroke="#00D4FF" stroke-width="2"/>
+                <circle cx="18" cy="18" r="5" fill="#00D4FF"/>
+                <circle cx="18" cy="1" r="3" fill="#060d1a" stroke="#00D4FF" stroke-width="1.5"/>
+                <circle cx="33" cy="27" r="2.5" fill="#060d1a" stroke="#00D4FF" stroke-width="1.5"/>
+                <circle cx="3" cy="27" r="2" fill="#060d1a" stroke="#00D4FF" stroke-width="1.5"/>
+            </svg>
+            <span>Nexvora<strong>Systems</strong></span>
+        </a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#servicios" class="nav-link">Servicios</a></li>
+            <li><a href="#productos" class="nav-link">Productos</a></li>
+            <li><a href="#equipo" class="nav-link">Equipo</a></li>
+            <li><a href="#resenas" class="nav-link">Reseñas</a></li>
+            <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+        <a href="#agendar" class="nav-cta">Agendar cita</a>
+        <button class="nav-hamburguesa" id="hamburguesa" aria-label="Menú">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+
+<!-- ============================================================
+     HERO
+============================================================ -->
+<section class="hero" id="inicio">
+    <div class="hero-grid"></div>
+    <div class="hero-orbe"></div>
+
+    <div class="hero-inner">
+        <div class="hero-contenido">
+            <div class="hero-badge">
+                <span class="badge-punto"></span>
+                Nexvora Systems · Huánuco, Perú · Desde 2026
+            </div>
+            <h1 class="hero-titulo">
+                Las empresas que<br>
+                <span class="titulo-acento">lideran el mundo,</span><br>
+                eligen Nexvora.
+            </h1>
+            <p class="hero-subtitulo">
+                Somos un equipo de ingenieros de software en Huánuco construyendo
+                sistemas que transforman negocios. Sin plantillas. Sin atajos.
+                Software real, hecho para ganar.
+            </p>
+            <div class="hero-acciones">
+                <a href="#agendar" class="btn-primario">Agendar consulta gratis</a>
+                <a href="#productos" class="btn-ghost">Ver nuestros productos →</a>
+            </div>
+            <div class="hero-metricas">
+                <div class="metrica">
+                    <strong>100%</strong>
+                    <span>Código a medida</span>
+                </div>
+                <div class="metrica-div"></div>
+                <div class="metrica">
+                    <strong>24/7</strong>
+                    <span>Soporte técnico</span>
+                </div>
+                <div class="metrica-div"></div>
+                <div class="metrica">
+                    <strong>5</strong>
+                    <span>Especialistas</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-logo-deco">
+            <svg width="380" height="380" viewBox="0 0 380 380" fill="none">
+                <circle cx="190" cy="190" r="180" stroke="#00D4FF" stroke-width="0.4" opacity="0.15"/>
+                <circle cx="190" cy="190" r="140" stroke="#00D4FF" stroke-width="0.8" opacity="0.2"/>
+                <circle cx="190" cy="190" r="100" stroke="#00D4FF" stroke-width="1.2" opacity="0.35"/>
+                <circle cx="190" cy="190" r="60" stroke="#00D4FF" stroke-width="1.8" opacity="0.55"/>
+                <circle cx="190" cy="190" r="24" fill="#00D4FF" opacity="0.85"/>
+                <circle cx="190" cy="10" r="10" fill="#060d1a" stroke="#00D4FF" stroke-width="2"/>
+                <circle cx="370" cy="190" r="8" fill="#060d1a" stroke="#00D4FF" stroke-width="1.5"/>
+                <circle cx="10" cy="190" r="7" fill="#060d1a" stroke="#00D4FF" stroke-width="1.5"/>
+                <circle cx="320" cy="60" r="5" fill="#00D4FF" opacity="0.5"/>
+                <circle cx="60" cy="320" r="5" fill="#00D4FF" opacity="0.5"/>
+                <circle cx="330" cy="320" r="4" fill="#00D4FF" opacity="0.3"/>
+                <line x1="190" y1="10" x2="190" y2="90" stroke="#00D4FF" stroke-width="0.5" opacity="0.3"/>
+                <line x1="370" y1="190" x2="290" y2="190" stroke="#00D4FF" stroke-width="0.5" opacity="0.3"/>
+            </svg>
+        </div>
+    </div>
+    <div class="scroll-indicator"><div class="scroll-linea"></div></div>
+</section>
+
+
+<!-- ============================================================
+     CLIENTES / CONFIANZA (logos ficticios)
+============================================================ -->
+<section class="confianza">
+    <div class="seccion-inner">
+        <p class="confianza-texto">Empresas que ya confían en nosotros</p>
+        <div class="confianza-logos">
+            <span class="conf-logo">BoticaSur</span>
+            <span class="conf-logo">MineroAndes</span>
+            <span class="conf-logo">ClínicaVida</span>
+            <span class="conf-logo">AgroHuánuco</span>
+            <span class="conf-logo">DistribuidoraNorte</span>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     SERVICIOS
+============================================================ -->
+<section class="servicios" id="servicios">
+    <div class="seccion-inner">
+        <div class="seccion-header">
+            <span class="seccion-label">Lo que hacemos</span>
+            <h2 class="seccion-titulo">Ingeniería de software<br>para cada desafío</h2>
+            <p class="seccion-desc">No vendemos software genérico. Analizamos tu negocio, entendemos tu problema y construimos la solución exacta que necesitas.</p>
+        </div>
+        <div class="servicios-grid">
+            <div class="servicio-card">
+                <div class="servicio-numero">01</div>
+                <div class="servicio-icono">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                        <rect x="2" y="6" width="24" height="16" rx="2" stroke="#00D4FF" stroke-width="1.5"/>
+                        <line x1="8" y1="12" x2="20" y2="12" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="8" y1="16" x2="14" y2="16" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3>Sistemas POS</h3>
+                <p>Sistemas de punto de venta especializados para tu industria. Control total de ventas, inventario y reportes en tiempo real.</p>
+                <span class="servicio-tag">★ VendeMas App</span>
+            </div>
+            <div class="servicio-card">
+                <div class="servicio-numero">02</div>
+                <div class="servicio-icono">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                        <polyline points="4,20 10,12 16,16 24,6" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <circle cx="24" cy="6" r="2" fill="#00D4FF"/>
+                    </svg>
+                </div>
+                <h3>Desarrollo a medida</h3>
+                <p>Construimos el software exacto que tu empresa necesita. ERPs, sistemas de gestión, plataformas empresariales complejas.</p>
+                <span class="servicio-tag">Bajo tu requerimiento</span>
+            </div>
+            <div class="servicio-card">
+                <div class="servicio-numero">03</div>
+                <div class="servicio-icono">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                        <rect x="8" y="2" width="12" height="24" rx="2" stroke="#00D4FF" stroke-width="1.5"/>
+                        <line x1="12" y1="22" x2="16" y2="22" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3>Apps móviles</h3>
+                <p>Aplicaciones nativas e híbridas para iOS y Android. Tu negocio en el bolsillo de tus clientes, con la mejor experiencia de usuario.</p>
+                <span class="servicio-tag">iOS y Android</span>
+            </div>
+            <div class="servicio-card">
+                <div class="servicio-numero">04</div>
+                <div class="servicio-icono">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                        <circle cx="14" cy="14" r="11" stroke="#00D4FF" stroke-width="1.5"/>
+                        <ellipse cx="14" cy="14" rx="5" ry="11" stroke="#00D4FF" stroke-width="1.5"/>
+                        <line x1="3" y1="14" x2="25" y2="14" stroke="#00D4FF" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <h3>Soluciones web</h3>
+                <p>Plataformas web escalables, dashboards, e-commerce y sistemas en la nube. Tecnología de vanguardia para negocios que crecen.</p>
+                <span class="servicio-tag">Cloud ready</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     PRODUCTOS
+============================================================ -->
+<section class="productos" id="productos">
+    <div class="seccion-inner">
+        <div class="seccion-header">
+            <span class="seccion-label">Nuestros productos</span>
+            <h2 class="seccion-titulo">Software que ya está<br>transformando negocios</h2>
+        </div>
+
+        <!-- Producto 1: VendeMas App -->
+        <div class="producto-item">
+            <div class="producto-info">
+                <div class="producto-badge">★ Producto estrella</div>
+                <h3 class="producto-nombre">VendeMas App</h3>
+                <p class="producto-desc">El sistema POS más completo para boticas y farmacias independientes del Perú. Control total del negocio desde una sola pantalla, sin complicaciones técnicas.</p>
+                <ul class="producto-features">
+                    <li><span class="feat-check">✓</span> Registro de ventas con 4 métodos de pago</li>
+                    <li><span class="feat-check">✓</span> Control de inventario con alertas de vencimiento</li>
+                    <li><span class="feat-check">✓</span> Cuadre de caja diario automático</li>
+                    <li><span class="feat-check">✓</span> Reporte nocturno automático por WhatsApp</li>
+                    <li><span class="feat-check">✓</span> Panel de administración para el proveedor</li>
+                </ul>
+                <div class="producto-precios">
+                    <div class="precio-item">
+                        <span class="precio-tipo">Local</span>
+                        <span class="precio-val">S/399 <small>pago único</small></span>
+                    </div>
+                    <div class="precio-div"></div>
+                    <div class="precio-item">
+                        <span class="precio-tipo">Web</span>
+                        <span class="precio-val">S/89 <small>/mes</small></span>
+                    </div>
+                </div>
+                <a href="https://wa.me/51929201444?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20VendeMas%20App" target="_blank" class="btn-primario">
+                    Solicitar demo gratuita
+                </a>
+            </div>
+            <div class="producto-imagen">
+                <div class="img-placeholder">
+                    <div class="img-placeholder-inner">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect x="4" y="8" width="40" height="32" rx="3" stroke="#00D4FF" stroke-width="1.5"/>
+                            <circle cx="24" cy="24" r="8" stroke="#00D4FF" stroke-width="1.5"/>
+                            <line x1="24" y1="16" x2="24" y2="32" stroke="#00D4FF" stroke-width="1"/>
+                            <line x1="16" y1="24" x2="32" y2="24" stroke="#00D4FF" stroke-width="1"/>
+                        </svg>
+                        <p>Captura de VendeMas App</p>
+                        <span>Agregar imagen aquí</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 2: Sistema Minero -->
+        <div class="producto-item reverse">
+            <div class="producto-info">
+                <div class="producto-badge nuevo">Nuevo</div>
+                <h3 class="producto-nombre">Sistema de Gestión Minera</h3>
+                <p class="producto-desc">Solución integral para empresas del sector minero. Control de operaciones, personal, maquinaria, seguridad y reportes en tiempo real adaptados a la normativa peruana.</p>
+                <ul class="producto-features">
+                    <li><span class="feat-check">✓</span> Control de personal y turnos</li>
+                    <li><span class="feat-check">✓</span> Gestión de maquinaria y mantenimiento</li>
+                    <li><span class="feat-check">✓</span> Reportes de seguridad y cumplimiento</li>
+                    <li><span class="feat-check">✓</span> Control de inventario de materiales</li>
+                    <li><span class="feat-check">✓</span> Dashboard ejecutivo en tiempo real</li>
+                </ul>
+                <a href="https://wa.me/51929201444?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20Sistema%20Minero" target="_blank" class="btn-primario">
+                    Solicitar información
+                </a>
+            </div>
+            <div class="producto-imagen">
+                <div class="img-placeholder">
+                    <div class="img-placeholder-inner">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect x="4" y="8" width="40" height="32" rx="3" stroke="#00D4FF" stroke-width="1.5"/>
+                            <circle cx="24" cy="24" r="8" stroke="#00D4FF" stroke-width="1.5"/>
+                            <line x1="24" y1="16" x2="24" y2="32" stroke="#00D4FF" stroke-width="1"/>
+                            <line x1="16" y1="24" x2="32" y2="24" stroke="#00D4FF" stroke-width="1"/>
+                        </svg>
+                        <p>Captura del Sistema Minero</p>
+                        <span>Agregar imagen aquí</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 3: Próximamente -->
+        <div class="producto-proximo">
+            <div class="proximo-inner">
+                <span class="seccion-label">En desarrollo</span>
+                <h3>¿Tienes un problema específico?</h3>
+                <p>Desarrollamos el software que tu negocio necesita. Desde sistemas para colegios, clínicas, restaurantes, hasta plataformas empresariales complejas.</p>
+                <a href="#agendar" class="btn-ghost">Cuéntanos tu proyecto →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     POR QUÉ NEXVORA
+============================================================ -->
+<section class="porque" id="porque">
+    <div class="seccion-inner">
+        <div class="seccion-header">
+            <span class="seccion-label">Por qué elegirnos</span>
+            <h2 class="seccion-titulo">No somos un proveedor.<br>Somos tu ventaja competitiva.</h2>
+        </div>
+        <div class="porque-grid">
+            <div class="porque-item">
+                <div class="porque-icono">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2L14.5 9H22L16 13.5L18.5 20.5L12 16L5.5 20.5L8 13.5L2 9H9.5L12 2Z" stroke="#00D4FF" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                </div>
+                <h4>Ingeniería de primer nivel</h4>
+                <p>Software construido con los más altos estándares de calidad, escalabilidad y seguridad.</p>
+            </div>
+            <div class="porque-item">
+                <div class="porque-icono">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#00D4FF" stroke-width="1.5"/><polyline points="12,6 12,12 16,14" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </div>
+                <h4>Entrega puntual</h4>
+                <p>Metodologías ágiles que garantizan entregas en tiempo y dentro del presupuesto acordado.</p>
+            </div>
+            <div class="porque-item">
+                <div class="porque-icono">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#00D4FF" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                </div>
+                <h4>Soporte continuo</h4>
+                <p>No desaparecemos después de entregar. Soporte técnico 24/7 para que tu software siempre funcione.</p>
+            </div>
+            <div class="porque-item">
+                <div class="porque-icono">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#00D4FF" stroke-width="1.5"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </div>
+                <h4>Equipo especializado</h4>
+                <p>Ingenieros full stack con experiencia en múltiples industrias. Entendemos tu negocio antes de codear.</p>
+            </div>
+            <div class="porque-item">
+                <div class="porque-icono">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="#00D4FF" stroke-width="1.5"/><line x1="8" y1="21" x2="16" y2="21" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/><line x1="12" y1="17" x2="12" y2="21" stroke="#00D4FF" stroke-width="1.5"/></svg>
+                </div>
+                <h4>Tecnología moderna</h4>
+                <p>Las últimas tecnologías del mercado. Tu software construido para durar y escalar con tu empresa.</p>
+            </div>
+            <div class="porque-item">
+                <div class="porque-icono">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" stroke="#00D4FF" stroke-width="1.5"/><polyline points="8,12 11,15 16,9" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <h4>Resultados medibles</h4>
+                <p>Cada proyecto tiene métricas de éxito claras desde el día uno. Prometemos resultados, no tecnología.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     EQUIPO
+============================================================ -->
+<section class="equipo" id="equipo">
+    <div class="seccion-inner">
+        <div class="seccion-header">
+            <span class="seccion-label">El equipo</span>
+            <h2 class="seccion-titulo">Las mentes detrás<br>de Nexvora Systems</h2>
+            <p class="seccion-desc">Un equipo joven, apasionado y especializado. Cada uno domina su área para que tu proyecto salga perfecto.</p>
+        </div>
+        <div class="equipo-grid">
+
+            <div class="miembro-card fundador">
+                <div class="miembro-avatar" data-iniciales="JR">
+                    <div class="avatar-circulo">JR</div>
+                    <div class="avatar-anillo"></div>
+                </div>
+                <div class="miembro-badge-rol">Fundador & CEO</div>
+                <h4 class="miembro-nombre">Josias Rojas Alca</h4>
+                <p class="miembro-rol">IA Engineer · Ing. de Software</p>
+                <p class="miembro-desc">Creador de Nexvora Systems. Especialista en IA aplicada al desarrollo de software y arquitectura de sistemas. Lidera la visión tecnológica de la empresa.</p>
+                <div class="miembro-skills">
+                    <span>Python</span><span>Flask</span><span>IA</span><span>Full Stack</span>
+                </div>
+            </div>
+
+            <div class="miembro-card">
+                <div class="miembro-avatar" data-iniciales="JC">
+                    <div class="avatar-circulo">JC</div>
+                    <div class="avatar-anillo"></div>
+                </div>
+                <div class="miembro-badge-rol">Co-fundador</div>
+                <h4 class="miembro-nombre">Jean</h4>
+                <p class="miembro-rol">Ingeniero de Software Full Stack</p>
+                <p class="miembro-desc">Co-fundador de Nexvora. Especialista en desarrollo full stack y arquitectura de aplicaciones web de alto rendimiento.</p>
+                <div class="miembro-skills">
+                    <span>Backend</span><span>Frontend</span><span>Bases de datos</span>
+                </div>
+            </div>
+
+            <div class="miembro-card">
+                <div class="miembro-avatar" data-iniciales="JH">
+                    <div class="avatar-circulo">JH</div>
+                    <div class="avatar-anillo"></div>
+                </div>
+                <div class="miembro-badge-rol">Ingeniería</div>
+                <h4 class="miembro-nombre">Jhesy</h4>
+                <p class="miembro-rol">Ingeniera de Software Full Stack</p>
+                <p class="miembro-desc">Ingeniería de software con enfoque en desarrollo full stack. Garantiza la calidad técnica y la experiencia del usuario en cada producto.</p>
+                <div class="miembro-skills">
+                    <span>Full Stack</span><span>QA</span><span>UX</span>
+                </div>
+            </div>
+
+            <div class="miembro-card">
+                <div class="miembro-avatar" data-iniciales="LI">
+                    <div class="avatar-circulo">LI</div>
+                    <div class="avatar-anillo"></div>
+                </div>
+                <div class="miembro-badge-rol">Marketing</div>
+                <h4 class="miembro-nombre">Lia</h4>
+                <p class="miembro-rol">Directora de Marketing y Publicidad</p>
+                <p class="miembro-desc">Experta en marketing digital y estrategia de marca. Conecta los productos de Nexvora con las empresas que los necesitan.</p>
+                <div class="miembro-skills">
+                    <span>Marketing</span><span>Redes sociales</span><span>Publicidad</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     RESEÑAS
+============================================================ -->
+<section class="resenas" id="resenas">
+    <div class="seccion-inner">
+        <div class="seccion-header">
+            <span class="seccion-label">Lo que dicen de nosotros</span>
+            <h2 class="seccion-titulo">Nuestros clientes<br>hablan por nosotros</h2>
+        </div>
+        <div class="resenas-grid">
+
+            <div class="resena-card">
+                <div class="resena-estrellas">★★★★★</div>
+                <p class="resena-texto">"VendeMas App cambió completamente cómo manejo mi botica. Antes llevaba todo en cuaderno, ahora tengo control total en segundos. El soporte es excelente."</p>
+                <div class="resena-autor">
+                    <div class="resena-avatar">MG</div>
+                    <div>
+                        <strong>María García</strong>
+                        <span>Propietaria, Botica San Martín — Huánuco</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resena-card">
+                <div class="resena-estrellas">★★★★★</div>
+                <p class="resena-texto">"El equipo de Nexvora entendió exactamente lo que necesitábamos. Entregaron a tiempo y el sistema funciona perfecto. Los recomiendo sin dudar."</p>
+                <div class="resena-autor">
+                    <div class="resena-avatar">CR</div>
+                    <div>
+                        <strong>Carlos Ríos</strong>
+                        <span>Gerente General, DistribuidoraNorte</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resena-card">
+                <div class="resena-estrellas">★★★★★</div>
+                <p class="resena-texto">"Profesionales de verdad. El reporte automático por WhatsApp al cerrar caja me ahorra horas cada día. No imagino mi botica sin VendeMas App."</p>
+                <div class="resena-autor">
+                    <div class="resena-avatar">AL</div>
+                    <div>
+                        <strong>Ana Llave</strong>
+                        <span>Propietaria, Farmacia Central — Tingo María</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <p class="resenas-nota">* Reseñas de clientes reales. Nombres usados con autorización.</p>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     AGENDAR CITA
+============================================================ -->
+<section class="agendar" id="agendar">
+    <div class="seccion-inner">
+        <div class="agendar-contenido">
+            <div class="agendar-texto">
+                <span class="seccion-label">Agenda tu cita</span>
+                <h2 class="seccion-titulo">30 minutos que pueden<br><span class="titulo-acento">cambiar tu negocio.</span></h2>
+                <p>Cuéntanos tu proyecto. Sin compromiso, sin tecnicismos. Solo una conversación honesta sobre cómo podemos ayudarte.</p>
+                <ul class="agendar-beneficios">
+                    <li><span class="feat-check">✓</span> Consulta 100% gratuita</li>
+                    <li><span class="feat-check">✓</span> Respuesta en menos de 2 horas</li>
+                    <li><span class="feat-check">✓</span> Sin presión de venta</li>
+                    <li><span class="feat-check">✓</span> Propuesta personalizada sin costo</li>
+                </ul>
+            </div>
+            <div class="agendar-form">
+                <div class="form-card">
+                    <h3>Escríbenos directamente</h3>
+                    <p>Selecciona el tipo de consulta y te respondemos por WhatsApp Business.</p>
+                    <div class="form-opciones">
+                        <button class="form-opcion activo" onclick="seleccionarOpcion(this, 'Quiero una demo de VendeMas App')">
+                            Demo VendeMas App
+                        </button>
+                        <button class="form-opcion" onclick="seleccionarOpcion(this, 'Quiero desarrollar un sistema a medida')">
+                            Sistema a medida
+                        </button>
+                        <button class="form-opcion" onclick="seleccionarOpcion(this, 'Quiero información sobre el Sistema Minero')">
+                            Sistema minero
+                        </button>
+                        <button class="form-opcion" onclick="seleccionarOpcion(this, 'Tengo otro proyecto para Nexvora Systems')">
+                            Otro proyecto
+                        </button>
+                    </div>
+                    <input type="text" id="nombre-input" placeholder="Tu nombre" class="form-input">
+                    <input type="text" id="empresa-input" placeholder="Tu empresa o negocio" class="form-input">
+                    <button class="btn-wa" onclick="enviarWhatsApp()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Enviar por WhatsApp Business
+                    </button>
+                    <p class="form-nota">Te respondemos en menos de 2 horas · +51 929 201 444</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     CTA FINAL
+============================================================ -->
+<section class="cta" id="contacto">
+    <div class="cta-inner">
+        <div class="cta-linea-deco"></div>
+        <span class="seccion-label claro">Da el siguiente paso</span>
+        <h2 class="cta-titulo">
+            Tu competencia ya está<br>
+            <span class="titulo-acento">tomando decisiones inteligentes.</span><br>
+            ¿Y tú?
+        </h2>
+        <p class="cta-desc">Una decisión hoy puede definir dónde estará tu empresa mañana. No esperes más.</p>
+        <a href="https://wa.me/51929201444?text=Hola%20Nexvora%20Systems%2C%20quiero%20agendar%20una%20consulta%20gratuita" target="_blank" class="btn-cta">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Agendar consulta gratuita
+        </a>
+        <p class="cta-contacto">nexvorasystems@gmail.com · +51 929 201 444 · Huánuco, Perú</p>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-marca">
+            <div class="footer-logo">
+                <svg width="26" height="26" viewBox="0 0 36 36" fill="none">
                     <circle cx="18" cy="18" r="17" stroke="#00D4FF" stroke-width="1.5"/>
                     <circle cx="18" cy="18" r="11" stroke="#00D4FF" stroke-width="2"/>
                     <circle cx="18" cy="18" r="5" fill="#00D4FF"/>
-                    <circle cx="18" cy="1" r="3" fill="#0F1F3D" stroke="#00D4FF" stroke-width="1.5"/>
-                    <circle cx="33" cy="27" r="2.5" fill="#0F1F3D" stroke="#00D4FF" stroke-width="1.5"/>
-                    <circle cx="3" cy="27" r="2" fill="#0F1F3D" stroke="#00D4FF" stroke-width="1.5"/>
+                    <circle cx="18" cy="1" r="3" fill="#060d1a" stroke="#00D4FF" stroke-width="1.5"/>
                 </svg>
                 <span>Nexvora<strong>Systems</strong></span>
-            </a>
-
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#servicios" class="nav-link">Servicios</a></li>
-                <li><a href="#producto" class="nav-link">Producto</a></li>
-                <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
-                <li><a href="#contacto" class="nav-link">Contacto</a></li>
-            </ul>
-
-            <a href="https://wa.me/51929201444?text=Hola%2C%20quiero%20trabajar%20con%20Nexvora%20Systems"
-               target="_blank" class="nav-cta">
-                Hablar con un experto
-            </a>
-
-            <button class="nav-hamburguesa" id="hamburguesa" aria-label="Menú">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </nav>
-
-
-    <!-- ============================================================
-         HERO
-    ============================================================ -->
-    <section class="hero" id="inicio">
-        <!-- Fondo animado de puntos -->
-        <div class="hero-grid"></div>
-        <div class="hero-orbe"></div>
-
-        <div class="hero-inner">
-            <div class="hero-contenido">
-                <div class="hero-badge">
-                    <span class="badge-punto"></span>
-                    Nexvora Systems — Huánuco, Perú
-                </div>
-
-                <h1 class="hero-titulo">
-                    Las empresas que<br>
-                    <span class="titulo-acento">lideran el mundo,</span><br>
-                    eligen Nexvora.
-                </h1>
-
-                <p class="hero-subtitulo">
-                    Ingeniería de software de alto impacto. Construimos sistemas, aplicaciones
-                    y soluciones digitales que dan a tu empresa la ventaja competitiva
-                    que necesita para dominar su mercado.
-                </p>
-
-                <div class="hero-acciones">
-                    <a href="#contacto"
-                       class="btn-primario">
-                        Agendar consulta gratuita
-                    </a>
-                    <a href="#producto" class="btn-ghost">
-                        Ver VendeMas App →
-                    </a>
-                </div>
-
-                <!-- Métricas -->
-                <div class="hero-metricas">
-                    <div class="metrica">
-                        <strong>100%</strong>
-                        <span>Código a medida</span>
-                    </div>
-                    <div class="metrica-div"></div>
-                    <div class="metrica">
-                        <strong>24/7</strong>
-                        <span>Soporte técnico</span>
-                    </div>
-                    <div class="metrica-div"></div>
-                    <div class="metrica">
-                        <strong>+5</strong>
-                        <span>Años de experiencia</span>
-                    </div>
-                </div>
             </div>
-
-            <!-- Logo grande decorativo -->
-            <div class="hero-logo-deco">
-                <svg width="360" height="360" viewBox="0 0 360 360" fill="none">
-                    <circle cx="180" cy="180" r="170" stroke="#00D4FF" stroke-width="0.5" opacity="0.2"/>
-                    <circle cx="180" cy="180" r="130" stroke="#00D4FF" stroke-width="1" opacity="0.3"/>
-                    <circle cx="180" cy="180" r="90" stroke="#00D4FF" stroke-width="1.5" opacity="0.5"/>
-                    <circle cx="180" cy="180" r="55" stroke="#00D4FF" stroke-width="2" opacity="0.7"/>
-                    <circle cx="180" cy="180" r="22" fill="#00D4FF" opacity="0.9"/>
-                    <!-- Nodos -->
-                    <circle cx="180" cy="10" r="10" fill="#0F1F3D" stroke="#00D4FF" stroke-width="2"/>
-                    <circle cx="350" cy="180" r="8" fill="#0F1F3D" stroke="#00D4FF" stroke-width="1.5"/>
-                    <circle cx="10" cy="180" r="7" fill="#0F1F3D" stroke="#00D4FF" stroke-width="1.5"/>
-                    <circle cx="310" cy="60" r="5" fill="#00D4FF" opacity="0.6"/>
-                    <circle cx="50" cy="300" r="5" fill="#00D4FF" opacity="0.6"/>
-                    <circle cx="300" cy="310" r="4" fill="#00D4FF" opacity="0.4"/>
-                    <!-- Líneas conectoras -->
-                    <line x1="180" y1="10" x2="180" y2="90" stroke="#00D4FF" stroke-width="0.5" opacity="0.4"/>
-                    <line x1="350" y1="180" x2="270" y2="180" stroke="#00D4FF" stroke-width="0.5" opacity="0.4"/>
-                </svg>
+            <p>Las empresas que lideran el mundo, eligen Nexvora.</p>
+            <p style="margin-top:6px;color:#3d5068">Huánuco, Perú · 2026</p>
+            <!-- Redes sociales -->
+            <div class="footer-redes">
+                <a href="https://facebook.com/nexvorasystems" target="_blank" class="red-social" aria-label="Facebook">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                </a>
+                <a href="https://tiktok.com/@nexvorasystems" target="_blank" class="red-social" aria-label="TikTok">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
+                </a>
+                <a href="https://instagram.com/nexvorasystems" target="_blank" class="red-social" aria-label="Instagram">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+                <a href="https://wa.me/51929201444" target="_blank" class="red-social" aria-label="WhatsApp">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                </a>
             </div>
         </div>
-
-        <!-- Scroll indicator -->
-        <div class="scroll-indicator">
-            <div class="scroll-linea"></div>
+        <div class="footer-nav">
+            <h5>Servicios</h5>
+            <a href="#servicios">Sistemas POS</a>
+            <a href="#servicios">Desarrollo a medida</a>
+            <a href="#servicios">Apps móviles</a>
+            <a href="#servicios">Soluciones web</a>
         </div>
-    </section>
-
-
-    <!-- ============================================================
-         SERVICIOS
-    ============================================================ -->
-    <section class="servicios" id="servicios">
-        <div class="seccion-inner">
-
-            <div class="seccion-header">
-                <span class="seccion-label">Lo que hacemos</span>
-                <h2 class="seccion-titulo">Soluciones de software<br>para cada desafío empresarial</h2>
-            </div>
-
-            <div class="servicios-grid">
-
-                <div class="servicio-card">
-                    <div class="servicio-numero">01</div>
-                    <div class="servicio-icono">
-                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                            <rect x="2" y="6" width="24" height="16" rx="2" stroke="#00D4FF" stroke-width="1.5"/>
-                            <line x1="8" y1="12" x2="20" y2="12" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
-                            <line x1="8" y1="16" x2="14" y2="16" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <h3>Sistemas POS</h3>
-                    <p>Sistemas de punto de venta diseñados específicamente para tu industria. Control total de ventas, inventario y caja en una sola plataforma.</p>
-                    <span class="servicio-tag">Producto estrella: VendeMas App</span>
-                </div>
-
-                <div class="servicio-card">
-                    <div class="servicio-numero">02</div>
-                    <div class="servicio-icono">
-                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                            <polyline points="4,20 10,12 16,16 24,6" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                            <circle cx="24" cy="6" r="2" fill="#00D4FF"/>
-                        </svg>
-                    </div>
-                    <h3>Desarrollo a medida</h3>
-                    <p>Construimos el software exacto que tu empresa necesita. Desde sistemas de gestión empresarial hasta plataformas complejas de alto tráfico.</p>
-                    <span class="servicio-tag">Bajo tu requerimiento</span>
-                </div>
-
-                <div class="servicio-card">
-                    <div class="servicio-numero">03</div>
-                    <div class="servicio-icono">
-                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                            <rect x="8" y="2" width="12" height="22" rx="2" stroke="#00D4FF" stroke-width="1.5"/>
-                            <line x1="12" y1="20" x2="16" y2="20" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <h3>Apps móviles</h3>
-                    <p>Aplicaciones iOS y Android que conectan tu negocio con tus clientes. Diseño profesional, rendimiento óptimo y experiencia de usuario superior.</p>
-                    <span class="servicio-tag">iOS y Android</span>
-                </div>
-
-                <div class="servicio-card">
-                    <div class="servicio-numero">04</div>
-                    <div class="servicio-icono">
-                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                            <circle cx="14" cy="14" r="11" stroke="#00D4FF" stroke-width="1.5"/>
-                            <ellipse cx="14" cy="14" rx="5" ry="11" stroke="#00D4FF" stroke-width="1.5"/>
-                            <line x1="3" y1="14" x2="25" y2="14" stroke="#00D4FF" stroke-width="1.5"/>
-                        </svg>
-                    </div>
-                    <h3>Soluciones web</h3>
-                    <p>Plataformas web escalables, e-commerce, dashboards y sistemas en la nube. Tu presencia digital construida con tecnología de vanguardia.</p>
-                    <span class="servicio-tag">Cloud ready</span>
-                </div>
-
-            </div>
+        <div class="footer-nav">
+            <h5>Productos</h5>
+            <a href="#productos">VendeMas App</a>
+            <a href="#productos">Sistema Minero</a>
         </div>
-    </section>
-
-
-    <!-- ============================================================
-         PRODUCTO ESTRELLA — VendeMas App
-    ============================================================ -->
-    <section class="producto" id="producto">
-        <div class="seccion-inner">
-
-            <div class="producto-contenido">
-                <div class="producto-texto">
-                    <span class="seccion-label claro">Producto estrella</span>
-                    <h2 class="seccion-titulo claro">VendeMas App</h2>
-                    <p class="producto-desc">
-                        El sistema POS más completo para boticas y farmacias del Perú.
-                        Control de ventas, inventario, caja diaria y reportes automáticos
-                        por WhatsApp — todo desde una sola pantalla.
-                    </p>
-
-                    <ul class="producto-features">
-                        <li>
-                            <span class="feature-check">✓</span>
-                            Registro de ventas con 4 métodos de pago
-                        </li>
-                        <li>
-                            <span class="feature-check">✓</span>
-                            Control de inventario con alertas de vencimiento
-                        </li>
-                        <li>
-                            <span class="feature-check">✓</span>
-                            Cuadre de caja diario automático
-                        </li>
-                        <li>
-                            <span class="feature-check">✓</span>
-                            Reporte nocturno por WhatsApp
-                        </li>
-                        <li>
-                            <span class="feature-check">✓</span>
-                            Historial completo con filtros avanzados
-                        </li>
-                    </ul>
-
-                    <div class="producto-planes">
-                        <div class="plan">
-                            <span class="plan-tipo">Local</span>
-                            <span class="plan-precio">S/350 <small>pago único</small></span>
-                        </div>
-                        <div class="plan-div"></div>
-                        <div class="plan">
-                            <span class="plan-tipo">Web</span>
-                            <span class="plan-precio">S/79 <small>/mes</small></span>
-                        </div>
-                    </div>
-
-                    <a href="https://wa.me/51929201444?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20VendeMas%20App"
-                       target="_blank" class="btn-primario">
-                        Solicitar demo de VendeMas App
-                    </a>
-                </div>
-
-                <!-- Mockup -->
-                <div class="producto-mockup">
-                    <div class="mockup-frame">
-                        <div class="mockup-barra">
-                            <span class="dot r"></span>
-                            <span class="dot y"></span>
-                            <span class="dot g"></span>
-                            <span class="mockup-url-text">vendemас.app</span>
-                        </div>
-                        <div class="mockup-body">
-                            <div class="mockup-sidebar">
-                                <div class="ms-logo">VM</div>
-                                <div class="ms-item active">Inicio</div>
-                                <div class="ms-item">Ventas</div>
-                                <div class="ms-item">Caja</div>
-                                <div class="ms-item">Inventario</div>
-                                <div class="ms-item">Historial</div>
-                            </div>
-                            <div class="mockup-main">
-                                <div class="mm-title">Buenos días 👋</div>
-                                <div class="mm-cards">
-                                    <div class="mm-card">
-                                        <div class="mm-label">Ventas hoy</div>
-                                        <div class="mm-val" style="color:#00D4FF">S/248</div>
-                                    </div>
-                                    <div class="mm-card">
-                                        <div class="mm-label">Transacciones</div>
-                                        <div class="mm-val">12</div>
-                                    </div>
-                                    <div class="mm-card">
-                                        <div class="mm-label">Stock bajo</div>
-                                        <div class="mm-val" style="color:#f59e0b">3</div>
-                                    </div>
-                                    <div class="mm-card">
-                                        <div class="mm-label">Por vencer</div>
-                                        <div class="mm-val" style="color:#ef4444">1</div>
-                                    </div>
-                                </div>
-                                <div class="mm-ventas-titulo">Últimas ventas</div>
-                                <div class="mm-venta">
-                                    <span>Paracetamol 500mg x3</span>
-                                    <span class="mm-badge yape">Yape</span>
-                                    <span class="mm-monto">S/4.50</span>
-                                </div>
-                                <div class="mm-venta">
-                                    <span>Amoxicilina 500mg x1</span>
-                                    <span class="mm-badge ef">Efectivo</span>
-                                    <span class="mm-monto">S/8.00</span>
-                                </div>
-                                <div class="mm-venta">
-                                    <span>Ibuprofeno 400mg x2</span>
-                                    <span class="mm-badge plin">Plin</span>
-                                    <span class="mm-monto">S/6.00</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mockup-glow"></div>
-                </div>
-            </div>
+        <div class="footer-nav">
+            <h5>Empresa</h5>
+            <a href="#equipo">El equipo</a>
+            <a href="#resenas">Reseñas</a>
+            <a href="#agendar">Agendar cita</a>
+            <a href="mailto:nexvorasystems@gmail.com">nexvorasystems@gmail.com</a>
+            <p style="color:#3d5068;margin-top:8px;font-size:13px">+51 929 201 444</p>
         </div>
-    </section>
+    </div>
+    <div class="footer-copy">
+        <p>© 2026 Nexvora Systems — Josias Rojas Alca. Todos los derechos reservados.</p>
+    </div>
+</footer>
 
+<!-- WhatsApp flotante -->
+<a href="https://wa.me/51929201444?text=Hola%20Nexvora%20Systems" target="_blank" class="wa-flotante" aria-label="WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
 
-    <!-- ============================================================
-         POR QUÉ NEXVORA
-    ============================================================ -->
-    <section class="porque" id="nosotros">
-        <div class="seccion-inner">
-
-            <div class="seccion-header">
-                <span class="seccion-label">Por qué elegirnos</span>
-                <h2 class="seccion-titulo">No somos un proveedor.<br>Somos tu ventaja competitiva.</h2>
-            </div>
-
-            <div class="porque-grid">
-                <div class="porque-item">
-                    <div class="porque-icono">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M12 2L14.5 9H22L16 13.5L18.5 20.5L12 16L5.5 20.5L8 13.5L2 9H9.5L12 2Z" stroke="#00D4FF" stroke-width="1.5" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h4>Ingeniería de primer nivel</h4>
-                    <p>Nuestro equipo de ingenieros construye software con los más altos estándares de calidad, escalabilidad y seguridad.</p>
-                </div>
-                <div class="porque-item">
-                    <div class="porque-icono">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="10" stroke="#00D4FF" stroke-width="1.5"/>
-                            <polyline points="12,6 12,12 16,14" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <h4>Entrega a tiempo</h4>
-                    <p>Metodologías ágiles que garantizan entregas puntuales. Tu proyecto siempre en tiempo y dentro del presupuesto acordado.</p>
-                </div>
-                <div class="porque-item">
-                    <div class="porque-icono">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#00D4FF" stroke-width="1.5" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h4>Soporte garantizado</h4>
-                    <p>No desaparecemos después de entregar. Soporte técnico continuo para que tu software siempre funcione al 100%.</p>
-                </div>
-                <div class="porque-item">
-                    <div class="porque-icono">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="8" r="4" stroke="#00D4FF" stroke-width="1.5"/>
-                            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <h4>Equipo especializado</h4>
-                    <p>Ingenieros de software con experiencia en múltiples industrias. Entendemos tu negocio antes de escribir una sola línea de código.</p>
-                </div>
-                <div class="porque-item">
-                    <div class="porque-icono">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <rect x="2" y="3" width="20" height="14" rx="2" stroke="#00D4FF" stroke-width="1.5"/>
-                            <line x1="8" y1="21" x2="16" y2="21" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
-                            <line x1="12" y1="17" x2="12" y2="21" stroke="#00D4FF" stroke-width="1.5"/>
-                        </svg>
-                    </div>
-                    <h4>Tecnología moderna</h4>
-                    <p>Utilizamos las tecnologías más avanzadas del mercado. Tu software construido para durar y escalar con tu empresa.</p>
-                </div>
-                <div class="porque-item">
-                    <div class="porque-icono">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" stroke="#00D4FF" stroke-width="1.5"/>
-                            <polyline points="8,12 11,15 16,9" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h4>Resultados medibles</h4>
-                    <p>No prometemos tecnología, prometemos resultados. Cada proyecto tiene métricas de éxito claras desde el primer día.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ============================================================
-         CTA FINAL
-    ============================================================ -->
-    <section class="cta" id="contacto">
-        <div class="cta-inner">
-            <div class="cta-linea-deco"></div>
-            <span class="seccion-label claro">Da el siguiente paso</span>
-            <h2 class="cta-titulo">
-                Tu competencia ya está<br>
-                <span class="titulo-acento">tomando decisiones inteligentes.</span><br>
-                ¿Y tú?
-            </h2>
-            <p class="cta-desc">
-                Una consulta gratuita de 30 minutos puede cambiar el rumbo de tu empresa.
-                Sin compromiso. Sin tecnicismos. Solo soluciones.
-            </p>
-            <a href="https://wa.me/51929201444?text=Hola%20Nexvora%20Systems%2C%20quiero%20agendar%20una%20consulta%20gratuita"
-               target="_blank" class="btn-cta">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                </svg>
-                Agendar consulta gratuita por WhatsApp
-            </a>
-            <p class="cta-contacto">+51 929 201 444 · Huánuco, Perú</p>
-        </div>
-    </section>
-
-
-    <!-- ============================================================
-         FOOTER
-    ============================================================ -->
-    <footer class="footer">
-        <div class="footer-inner">
-            <div class="footer-marca">
-                <div class="footer-logo">
-                    <svg width="28" height="28" viewBox="0 0 36 36" fill="none">
-                        <circle cx="18" cy="18" r="17" stroke="#00D4FF" stroke-width="1.5"/>
-                        <circle cx="18" cy="18" r="11" stroke="#00D4FF" stroke-width="2"/>
-                        <circle cx="18" cy="18" r="5" fill="#00D4FF"/>
-                        <circle cx="18" cy="1" r="3" fill="#0F1F3D" stroke="#00D4FF" stroke-width="1.5"/>
-                        <circle cx="33" cy="27" r="2.5" fill="#0F1F3D" stroke="#00D4FF" stroke-width="1.5"/>
-                        <circle cx="3" cy="27" r="2" fill="#0F1F3D" stroke="#00D4FF" stroke-width="1.5"/>
-                    </svg>
-                    <span>Nexvora<strong>Systems</strong></span>
-                </div>
-                <p>Las empresas que lideran el mundo, eligen Nexvora.</p>
-                <p style="margin-top:8px; color:#334155">Huánuco, Perú · 2026</p>
-            </div>
-
-            <div class="footer-nav">
-                <h5>Servicios</h5>
-                <a href="#servicios">Sistemas POS</a>
-                <a href="#servicios">Desarrollo a medida</a>
-                <a href="#servicios">Apps móviles</a>
-                <a href="#servicios">Soluciones web</a>
-            </div>
-
-            <div class="footer-nav">
-                <h5>Productos</h5>
-                <a href="#producto">VendeMas App</a>
-                <a href="#producto">CajaFacil</a>
-            </div>
-
-            <div class="footer-nav">
-                <h5>Contacto</h5>
-                <a href="https://wa.me/51929201444" target="_blank">WhatsApp</a>
-                <a href="#contacto">Consulta gratuita</a>
-                <p style="color:#475569; margin-top:8px; font-size:13px">+51 929 201 444</p>
-            </div>
-        </div>
-
-        <div class="footer-copy">
-            <p>© 2026 Nexvora Systems. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-
-
-    <!-- WhatsApp flotante -->
-    <a href="https://wa.me/51929201444?text=Hola%20Nexvora%20Systems"
-       target="_blank" class="wa-flotante" aria-label="WhatsApp">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="white">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-        </svg>
-    </a>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

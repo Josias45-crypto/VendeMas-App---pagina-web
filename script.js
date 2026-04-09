@@ -1,96 +1,73 @@
 /* ============================================================
-   Nexvora Systems — script.js v2
-   Efectos: Canvas partículas, navbar scroll, menú móvil,
-            animaciones entrada con IntersectionObserver
+   Nexvora Systems — script.js v3
+   Canvas partículas, navbar, menú, animaciones, formulario
 ============================================================ */
 
-/* ============================================================
-   CANVAS DE PARTÍCULAS — red de nodos interconectados
-   Efecto clásico de empresa tech de alto nivel
-============================================================ */
+/* --- Canvas partículas --- */
 function iniciarCanvas() {
     var canvas = document.getElementById('canvas-bg');
     if (!canvas) return;
     var ctx = canvas.getContext('2d');
-
-    canvas.width  = window.innerWidth;
+    canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-
     var particulas = [];
-    var cantidad   = Math.floor((canvas.width * canvas.height) / 14000);
-    var mouse      = { x: null, y: null, radio: 150 };
+    var mouse = { x: null, y: null };
 
-    window.addEventListener('mousemove', function(e) {
-        mouse.x = e.clientX;
-        mouse.y = e.clientY;
-    });
-
-    window.addEventListener('resize', function() {
-        canvas.width  = window.innerWidth;
-        canvas.height = window.innerHeight;
-        iniciarParticulas();
-    });
+    window.addEventListener('mousemove', function(e) { mouse.x = e.clientX; mouse.y = e.clientY; });
+    window.addEventListener('resize', function() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; crearParticulas(); });
 
     function Particula() {
-        this.x    = Math.random() * canvas.width;
-        this.y    = Math.random() * canvas.height;
-        this.vx   = (Math.random() - 0.5) * 0.4;
-        this.vy   = (Math.random() - 0.5) * 0.4;
-        this.r    = Math.random() * 1.5 + 0.5;
-        this.alpha = Math.random() * 0.5 + 0.2;
+        this.x  = Math.random() * canvas.width;
+        this.y  = Math.random() * canvas.height;
+        this.vx = (Math.random() - 0.5) * 0.35;
+        this.vy = (Math.random() - 0.5) * 0.35;
+        this.r  = Math.random() * 1.4 + 0.4;
+        this.a  = Math.random() * 0.4 + 0.15;
     }
-
     Particula.prototype.update = function() {
-        this.x += this.vx;
-        this.y += this.vy;
+        this.x += this.vx; this.y += this.vy;
         if (this.x < 0 || this.x > canvas.width)  this.vx *= -1;
         if (this.y < 0 || this.y > canvas.height)  this.vy *= -1;
     };
-
     Particula.prototype.draw = function() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(0,212,255,' + this.alpha + ')';
+        ctx.fillStyle = 'rgba(0,212,255,' + this.a + ')';
         ctx.fill();
     };
 
-    function iniciarParticulas() {
+    function crearParticulas() {
         particulas = [];
-        cantidad = Math.floor((canvas.width * canvas.height) / 14000);
-        for (var i = 0; i < cantidad; i++) {
-            particulas.push(new Particula());
-        }
+        var n = Math.floor((canvas.width * canvas.height) / 15000);
+        for (var i = 0; i < n; i++) particulas.push(new Particula());
     }
 
     function conectar() {
-        var distMax = 120;
+        var d = 110;
         for (var i = 0; i < particulas.length; i++) {
             for (var j = i + 1; j < particulas.length; j++) {
-                var dx   = particulas[i].x - particulas[j].x;
-                var dy   = particulas[i].y - particulas[j].y;
-                var dist = Math.sqrt(dx * dx + dy * dy);
-                if (dist < distMax) {
-                    var opacity = (1 - dist / distMax) * 0.3;
+                var dx = particulas[i].x - particulas[j].x;
+                var dy = particulas[i].y - particulas[j].y;
+                var dist = Math.sqrt(dx*dx + dy*dy);
+                if (dist < d) {
                     ctx.beginPath();
                     ctx.moveTo(particulas[i].x, particulas[i].y);
                     ctx.lineTo(particulas[j].x, particulas[j].y);
-                    ctx.strokeStyle = 'rgba(0,212,255,' + opacity + ')';
-                    ctx.lineWidth   = 0.5;
+                    ctx.strokeStyle = 'rgba(0,212,255,' + (1 - dist/d) * 0.25 + ')';
+                    ctx.lineWidth = 0.5;
                     ctx.stroke();
                 }
             }
-            /* Conexión con el mouse */
             if (mouse.x !== null) {
-                var mdx  = particulas[i].x - mouse.x;
-                var mdy  = particulas[i].y - mouse.y;
-                var mdist = Math.sqrt(mdx * mdx + mdy * mdy);
-                if (mdist < mouse.radio) {
-                    var mopacity = (1 - mdist / mouse.radio) * 0.6;
+                var mdx = particulas[i].x - mouse.x;
+                var mdy = particulas[i].y - mouse.y;
+                var md  = Math.sqrt(mdx*mdx + mdy*mdy);
+                if (md < 140) {
                     ctx.beginPath();
                     ctx.moveTo(particulas[i].x, particulas[i].y);
                     ctx.lineTo(mouse.x, mouse.y);
-                    ctx.strokeStyle = 'rgba(0,212,255,' + mopacity + ')';
-                    ctx.lineWidth   = 0.7;
+                    ctx.strokeStyle = 'rgba(0,212,255,' + (1 - md/140) * 0.5 + ')';
+                    ctx.lineWidth = 0.6;
                     ctx.stroke();
                 }
             }
@@ -99,70 +76,51 @@ function iniciarCanvas() {
 
     function animar() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        for (var i = 0; i < particulas.length; i++) {
-            particulas[i].update();
-            particulas[i].draw();
-        }
+        particulas.forEach(function(p) { p.update(); p.draw(); });
         conectar();
         requestAnimationFrame(animar);
     }
-
-    iniciarParticulas();
+    crearParticulas();
     animar();
 }
 
-/* ============================================================
-   NAVBAR SCROLL
-============================================================ */
-function iniciarNavbarScroll() {
-    var navbar = document.getElementById('navbar');
+/* --- Navbar scroll --- */
+function iniciarNavbar() {
+    var nb = document.getElementById('navbar');
     window.addEventListener('scroll', function() {
-        if (window.scrollY > 40) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
+        nb.classList.toggle('scrolled', window.scrollY > 40);
     });
 }
 
-/* ============================================================
-   MENÚ HAMBURGUESA
-============================================================ */
-function iniciarMenuMovil() {
+/* --- Menú hamburguesa --- */
+function iniciarMenu() {
     var btn   = document.getElementById('hamburguesa');
     var links = document.getElementById('nav-links');
-    if (!btn || !links) return;
-
-    btn.addEventListener('click', function() {
-        links.classList.toggle('abierto');
+    if (!btn) return;
+    btn.addEventListener('click', function() { links.classList.toggle('abierto'); });
+    links.querySelectorAll('.nav-link').forEach(function(l) {
+        l.addEventListener('click', function() { links.classList.remove('abierto'); });
     });
-
-    links.querySelectorAll('.nav-link').forEach(function(link) {
-        link.addEventListener('click', function() {
-            links.classList.remove('abierto');
-        });
-    });
-
     document.addEventListener('click', function(e) {
-        if (!e.target.closest('.nav-inner')) {
-            links.classList.remove('abierto');
-        }
+        if (!e.target.closest('.nav-inner')) links.classList.remove('abierto');
     });
 }
 
-/* ============================================================
-   ANIMACIONES DE ENTRADA
-============================================================ */
+/* --- Animaciones de entrada --- */
 function iniciarAnimaciones() {
-    document.querySelectorAll('.servicio-card').forEach(function(el, i) {
-        el.classList.add('animar', 'delay-' + Math.min(i+1, 4));
-    });
-    document.querySelectorAll('.porque-item').forEach(function(el, i) {
-        el.classList.add('animar', 'delay-' + Math.min(i+1, 4));
-    });
-    document.querySelectorAll('.seccion-header').forEach(function(el) {
-        el.classList.add('animar');
-    });
+    var animar = function(selector, delay) {
+        document.querySelectorAll(selector).forEach(function(el, i) {
+            el.classList.add('animar');
+            if (delay) el.classList.add('delay-' + Math.min(i+1, 4));
+        });
+    };
+    animar('.servicio-card', true);
+    animar('.porque-item', true);
+    animar('.miembro-card', true);
+    animar('.resena-card', true);
+    animar('.seccion-header', false);
+    animar('.producto-item', false);
+
     var hc = document.querySelector('.hero-contenido');
     if (hc) hc.classList.add('animar');
 
@@ -170,82 +128,80 @@ function iniciarAnimaciones() {
         document.querySelectorAll('.animar').forEach(function(el) { el.classList.add('visible'); });
         return;
     }
-
-    var observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
+    var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+            if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
         });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-    document.querySelectorAll('.animar').forEach(function(el) { observer.observe(el); });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.animar').forEach(function(el) { obs.observe(el); });
 }
 
-/* ============================================================
-   SMOOTH SCROLL
-============================================================ */
-function iniciarSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            var href    = link.getAttribute('href');
-            if (href === '#' || href === '') return;
-            var destino = document.querySelector(href);
-            if (!destino) return;
+/* --- Smooth scroll --- */
+function iniciarScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+        a.addEventListener('click', function(e) {
+            var href = a.getAttribute('href');
+            if (href === '#' || !href) return;
+            var dest = document.querySelector(href);
+            if (!dest) return;
             e.preventDefault();
-            var pos = destino.getBoundingClientRect().top + window.scrollY - 72;
-            window.scrollTo({ top: pos, behavior: 'smooth' });
+            window.scrollTo({ top: dest.getBoundingClientRect().top + window.scrollY - 70, behavior: 'smooth' });
         });
     });
 }
 
-/* ============================================================
-   CONTADOR ANIMADO para las métricas del hero
-============================================================ */
-function iniciarContadores() {
-    var contadores = document.querySelectorAll('.metrica strong');
-    var ya = false;
+/* --- Formulario de cita --- */
+var opcionSeleccionada = 'Quiero una demo de VendeMas App';
 
-    function animar() {
-        if (ya) return;
-        ya = true;
-        contadores.forEach(function(el) {
-            var texto = el.textContent;
-            var num   = parseFloat(texto.replace(/[^0-9.]/g, ''));
-            var sufijo = texto.replace(/[0-9.]/g, '');
+function seleccionarOpcion(btn, texto) {
+    document.querySelectorAll('.form-opcion').forEach(function(b) { b.classList.remove('activo'); });
+    btn.classList.add('activo');
+    opcionSeleccionada = texto;
+}
+
+function enviarWhatsApp() {
+    var nombre  = document.getElementById('nombre-input').value.trim();
+    var empresa = document.getElementById('empresa-input').value.trim();
+    var msg = 'Hola Nexvora Systems, ';
+    msg += opcionSeleccionada + '.';
+    if (nombre)  msg += ' Mi nombre es ' + nombre + '.';
+    if (empresa) msg += ' Mi empresa es ' + empresa + '.';
+    msg += ' Quisiera más información.';
+    window.open('https://wa.me/51929201444?text=' + encodeURIComponent(msg), '_blank');
+}
+
+/* --- Contador animado métricas --- */
+function iniciarContadores() {
+    var done = false;
+    var obs  = new IntersectionObserver(function(entries) {
+        if (!entries[0].isIntersecting || done) return;
+        done = true;
+        document.querySelectorAll('.metrica strong').forEach(function(el) {
+            var txt  = el.textContent;
+            var num  = parseFloat(txt.replace(/[^0-9.]/g, ''));
+            var suf  = txt.replace(/[0-9.]/g, '');
             if (isNaN(num)) return;
-            var inicio  = 0;
-            var duracion = 1500;
-            var inicio_t = null;
+            var t0 = null;
             function paso(t) {
-                if (!inicio_t) inicio_t = t;
-                var progreso = Math.min((t - inicio_t) / duracion, 1);
-                var eased    = 1 - Math.pow(1 - progreso, 3);
-                var actual   = Math.round(inicio + (num - inicio) * eased);
-                el.textContent = actual + sufijo;
-                if (progreso < 1) requestAnimationFrame(paso);
+                if (!t0) t0 = t;
+                var p = Math.min((t - t0) / 1400, 1);
+                var e = 1 - Math.pow(1 - p, 3);
+                el.textContent = Math.round(num * e) + suf;
+                if (p < 1) requestAnimationFrame(paso);
             }
             requestAnimationFrame(paso);
         });
-    }
-
-    var obs = new IntersectionObserver(function(entries) {
-        if (entries[0].isIntersecting) animar();
     }, { threshold: 0.5 });
-
-    var metricas = document.querySelector('.hero-metricas');
-    if (metricas) obs.observe(metricas);
+    var m = document.querySelector('.hero-metricas');
+    if (m) obs.observe(m);
 }
 
-/* ============================================================
-   INIT
-============================================================ */
+/* --- INIT --- */
 document.addEventListener('DOMContentLoaded', function() {
     iniciarCanvas();
-    iniciarNavbarScroll();
-    iniciarMenuMovil();
+    iniciarNavbar();
+    iniciarMenu();
     iniciarAnimaciones();
-    iniciarSmoothScroll();
+    iniciarScroll();
     iniciarContadores();
 });
